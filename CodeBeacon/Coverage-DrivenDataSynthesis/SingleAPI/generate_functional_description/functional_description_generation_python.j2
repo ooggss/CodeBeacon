@@ -1,0 +1,84 @@
+<message role="system">
+You are a senior software engineer and code comprehension expert.  
+Your task is to analyze the given Python code entity and then produce:
+
+1) <detail functional description of code element>  
+2) <summary>
+
+** in English ** based on the provided source code and dependency information of the target code entity only.
+
+</message><message role="user">
+
+# Instructions
+
+**Overall goal**  
+You will receive the source code and dependency information for the *target code entity* (such as function, global variable, or data type) in a Python project.  
+You must carefully read the code of this target entity and its related dependencies, and then:
+
+- Provide a fine-grained, detailed functional description of what this code entity does, how it behaves, and how it interacts with its dependencies.  
+- Provide a concise, one-sentence summary that a developer might use in daily conversation with a model to describe this entity's functionality.
+
+**Important rules**
+
+1. Only describe the functionality of the *target code entity* implied by the provided code and dependencies.  
+2. If something is not clear from the code, you may infer cautiously, but do not fabricate details that contradict the code.  
+3. Focus on *behavior and responsibilities* of the code entity:  
+   - What inputs it takes (parameters, global state)  
+   - What outputs it produces (return values, modified state)  
+   - Side effects (logging, I/O, modification of global variables, interaction with other components, error handling, etc.)  
+   - Important branches, modes, or configuration options  
+   - How it uses its dependencies (other functions, data types, or global variables)  
+4. Ignore non-functional details like formatting or obvious language syntax.  
+5. The final answer must have exactly these two sections in this order:
+
+   - `<detail functional description of code element>`: a multi-paragraph or multi-bullet, fine-grained description in Chinese.  
+   - `<summary>`: a single Chinese sentence that succinctly summarizes the main functionality.
+
+6. Do not include the source code itself in the answer. Only textually describe the behavior of the target code entity.
+
+---
+
+# Reference Materials
+
+Below is the source code and dependency information for the **target code entity** that you must summarize.
+
+## Entity Information
+### Entity Name
+{{ entity_info.entity_name }}
+### Entity Location
+{{ entity_info.entity_location }}
+### Source Code of Entity
+```python
+{{ entity_info.entity_code }}
+```
+
+## Dependency Information such as Related Functions, Data Types and Global Variables of Target Code Entity {{ entity_info.entity_name }}
+
+{% for dependency_info in entity_info.dependencies %}
+
+### Dependency Name
+{{ dependency_info.dependency_name }}
+
+### Dependency Location
+{{ dependency_info.dependency_location }}
+
+### Source Code of Dependency
+```python
+{{ dependency_info.dependency_code }}
+```
+
+{% endfor %}
+
+---
+
+# Output Format
+
+Return your answer in exactly the following structure (no extra text):
+
+<detail functional description of code element>
+[Provide a detailed functional description of this code entity in English, covering its functionality, input and output, state changes, key logic branches, interactions with dependencies, and possible usage scenarios.]
+</detail functional description of code element>
+<summary>
+[Summarize the main functionality of this code entity in a single concise English sentence, ** AS A DEVELOPER WOULD IN DAILY CONVERSATION **.]
+</summary>
+</message>

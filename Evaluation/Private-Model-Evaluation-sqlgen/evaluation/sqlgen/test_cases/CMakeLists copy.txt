@@ -1,0 +1,443 @@
+cmake_minimum_required(VERSION 3.23)
+
+# ============================================
+# 重要：必须在 project() 之前设置 vcpkg toolchain 和 features
+# ============================================
+set(SQLGEN_SOURCE_DIR "/data/workspace/Private-Model-Evaluation-sqlgen/third_patry_project/sqlgen")
+# set(SQLGEN_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../third_patry_project/sqlgen")
+
+# 配置 sqlgen 选项（根据需要启用/禁用）
+option(SQLGEN_MYSQL "Enable MySQL support" OFF)
+option(SQLGEN_POSTGRES "Enable PostgreSQL support" OFF)
+option(SQLGEN_SQLITE3 "Enable SQLite3 support" ON)
+option(SQLGEN_BUILD_TESTS "Build sqlgen tests" OFF)
+option(SQLGEN_BUILD_SHARED "Build shared library" OFF)
+
+# 配置本项目选项
+option(BUILD_TESTS "Build test cases" ON)
+option(ENABLE_COVERAGE "Enable code coverage" OFF)
+
+# 设置 vcpkg manifest features（必须在 project() 之前）
+if(SQLGEN_MYSQL)
+    list(APPEND VCPKG_MANIFEST_FEATURES "mysql")
+endif()
+
+if(SQLGEN_POSTGRES)
+    list(APPEND VCPKG_MANIFEST_FEATURES "postgres")
+endif()
+
+if(SQLGEN_SQLITE3)
+    list(APPEND VCPKG_MANIFEST_FEATURES "sqlite3")
+endif()
+
+# 如果启用测试，添加 tests feature（包含 GTest）
+if(BUILD_TESTS)
+    list(APPEND VCPKG_MANIFEST_FEATURES "tests")
+endif()
+
+# 设置 vcpkg manifest 目录指向 sqlgen 项目
+set(VCPKG_MANIFEST_DIR "${SQLGEN_SOURCE_DIR}" CACHE STRING "vcpkg manifest directory")
+
+if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+    set(CMAKE_TOOLCHAIN_FILE "${SQLGEN_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake"
+        CACHE STRING "Vcpkg toolchain file")
+    message(STATUS "Setting vcpkg toolchain: ${CMAKE_TOOLCHAIN_FILE}")
+endif()
+
+project(sqlgen_test_cases VERSION 1.0.0 LANGUAGES CXX)
+
+# 设置 C++ 标准为 C++20（sqlgen 需要）
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# ============================================
+# 代码覆盖率配置
+# ============================================
+if(ENABLE_COVERAGE)
+    message(STATUS "Code coverage enabled")
+    # 添加覆盖率编译和链接标志
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage -fprofile-arcs -ftest-coverage")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --coverage -fprofile-arcs -ftest-coverage")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --coverage")
+endif()
+
+# ============================================
+# 方法 1: 使用 add_subdirectory 引入 sqlgen
+# ============================================
+# sqlgen 选项已经在前面定义了
+
+# 添加 sqlgen 子目录
+# SQLGEN_SOURCE_DIR 已经在前面定义了
+if(EXISTS "${SQLGEN_SOURCE_DIR}/CMakeLists.txt")
+    message(STATUS "Found sqlgen at: ${SQLGEN_SOURCE_DIR}")
+    add_subdirectory(${SQLGEN_SOURCE_DIR} ${CMAKE_BINARY_DIR}/sqlgen)
+else()
+    message(FATAL_ERROR "Cannot find sqlgen at ${SQLGEN_SOURCE_DIR}")
+endif()
+
+# ============================================
+# 配置头文件包含目录
+# ============================================
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+# ============================================
+# 使用 GTest 构建单元测试
+# ============================================
+if(BUILD_TESTS)
+    enable_testing()
+    
+    # 查找 GTest 包
+    find_package(GTest CONFIG REQUIRED)
+    
+    message(STATUS "Building tests with GTest")
+    
+    # 测试可执行文件：test_aggregations
+    add_executable(test_aggregations tests/tests.cpp)
+    
+    # 链接库：sqlgen + GTest
+    target_link_libraries(test_aggregations PRIVATE 
+        sqlgen
+        GTest::gtest
+        GTest::gtest_main
+    )
+    
+    # 添加包含目录
+    target_include_directories(test_aggregations PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    
+    # 注册测试到 CTest
+    add_test(NAME test_aggregations COMMAND test_aggregations)
+    
+
+    add_executable(test_design_eas_database tests/test_design_eas_database.cpp)
+    target_link_libraries(test_design_eas_database PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_design_eas_database PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_design_eas_database COMMAND test_design_eas_database)
+
+    add_executable(test_update_eas_table tests/test_update_eas_table.cpp)
+    target_link_libraries(test_update_eas_table PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_update_eas_table PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_update_eas_table COMMAND test_update_eas_table)
+
+    add_executable(test_add_modify_eas_records tests/test_add+modify_eas_records.cpp)
+    target_link_libraries(test_add_modify_eas_records PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_add_modify_eas_records PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_add_modify_eas_records COMMAND test_add_modify_eas_records)
+
+    # 12-15 new
+    add_executable(test_batch_insert_products tests/test_batch_insert_products.cpp)
+    target_link_libraries(test_batch_insert_products PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_batch_insert_products PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_batch_insert_products COMMAND test_batch_insert_products)
+
+    add_executable(test_schema_create_complex_table tests/test_schema_create_complex_table.cpp)
+    target_link_libraries(test_schema_create_complex_table PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_schema_create_complex_table PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_schema_create_complex_table COMMAND test_schema_create_complex_table)
+
+    add_executable(test_schema_create_view_sales_summary tests/test_schema_create_view_sales_summary.cpp)
+    target_link_libraries(test_schema_create_view_sales_summary PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_schema_create_view_sales_summary PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_schema_create_view_sales_summary COMMAND test_schema_create_view_sales_summary)
+
+    add_executable(test_schema_create_trigger_audit_log tests/test_schema_create_trigger_audit_log.cpp)
+    target_link_libraries(test_schema_create_trigger_audit_log PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_schema_create_trigger_audit_log PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_schema_create_trigger_audit_log COMMAND test_schema_create_trigger_audit_log)
+
+    add_executable(test_schema_manage_indexes tests/test_schema_manage_indexes.cpp)
+    target_link_libraries(test_schema_manage_indexes PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_schema_manage_indexes PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_schema_manage_indexes COMMAND test_schema_manage_indexes)
+
+    add_executable(test_schema_migration_add_column tests/test_schema_migration_add_column.cpp)
+    target_link_libraries(test_schema_migration_add_column PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_schema_migration_add_column PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_schema_migration_add_column COMMAND test_schema_migration_add_column)
+
+    add_executable(test_query_search_books_by_criteria tests/test_query_search_books_by_criteria.cpp)
+    target_link_libraries(test_query_search_books_by_criteria PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_query_search_books_by_criteria PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_query_search_books_by_criteria COMMAND test_query_search_books_by_criteria)
+
+    add_executable(test_query_daily_traffic_metrics tests/test_query_daily_traffic_metrics.cpp)
+    target_link_libraries(test_query_daily_traffic_metrics PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_query_daily_traffic_metrics PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_query_daily_traffic_metrics COMMAND test_query_daily_traffic_metrics)
+
+    add_executable(test_query_course_enrollment_stats tests/test_query_course_enrollment_stats.cpp)
+    target_link_libraries(test_query_course_enrollment_stats PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_query_course_enrollment_stats PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_query_course_enrollment_stats COMMAND test_query_course_enrollment_stats)
+
+    add_executable(test_query_customer_purchase_history tests/test_query_customer_purchase_history.cpp)
+    target_link_libraries(test_query_customer_purchase_history PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_query_customer_purchase_history PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_query_customer_purchase_history COMMAND test_query_customer_purchase_history)
+
+    add_executable(test_query_employee_hierarchy tests/test_query_employee_hierarchy.cpp)
+    target_link_libraries(test_query_employee_hierarchy PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_query_employee_hierarchy PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_query_employee_hierarchy COMMAND test_query_employee_hierarchy)
+
+    add_executable(test_query_product_sales_report tests/test_query_product_sales_report.cpp)
+    target_link_libraries(test_query_product_sales_report PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_query_product_sales_report PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_query_product_sales_report COMMAND test_query_product_sales_report)
+
+    add_executable(test_delete_inactive_users tests/test_delete_inactive_users.cpp)
+    target_link_libraries(test_delete_inactive_users PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_delete_inactive_users PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_delete_inactive_users COMMAND test_delete_inactive_users)
+
+    add_executable(test_upsert_user_profile tests/test_upsert_user_profile.cpp)
+    target_link_libraries(test_upsert_user_profile PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_upsert_user_profile PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_upsert_user_profile COMMAND test_upsert_user_profile)
+
+    add_executable(test_soft_delete_records tests/test_soft_delete_records.cpp)
+    target_link_libraries(test_soft_delete_records PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_soft_delete_records PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_soft_delete_records COMMAND test_soft_delete_records)
+
+    add_executable(test_update_inventory_stock tests/test_update_inventory_stock.cpp)
+    target_link_libraries(test_update_inventory_stock PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_update_inventory_stock PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_update_inventory_stock COMMAND test_update_inventory_stock)
+
+    add_executable(test_update_order_status tests/test_update_order_status.cpp)
+    target_link_libraries(test_update_order_status PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_update_order_status PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_update_order_status COMMAND test_update_order_status)
+
+    add_executable(test_transaction_transfer_funds tests/test_transaction_transfer_funds.cpp)
+    target_link_libraries(test_transaction_transfer_funds PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_transaction_transfer_funds PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_transaction_transfer_funds COMMAND test_transaction_transfer_funds)
+
+    add_executable(test_query_active_users_posts tests/test_query_active_users_posts.cpp)
+    target_link_libraries(test_query_active_users_posts PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_query_active_users_posts PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_query_active_users_posts COMMAND test_query_active_users_posts)
+
+    add_executable(test_query_high_value_orders tests/test_query_high_value_orders.cpp)
+    target_link_libraries(test_query_high_value_orders PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_query_high_value_orders PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_query_high_value_orders COMMAND test_query_high_value_orders)
+
+    # 12.17 Update
+    add_executable(test_analysis_mathematical_operations tests/test_analysis_mathematical_operations.cpp)
+    target_link_libraries(test_analysis_mathematical_operations PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_analysis_mathematical_operations PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_analysis_mathematical_operations COMMAND test_analysis_mathematical_operations)
+
+    add_executable(test_analysis_temporal_data tests/test_analysis_temporal_data.cpp)
+    target_link_libraries(test_analysis_temporal_data PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_analysis_temporal_data PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_analysis_temporal_data COMMAND test_analysis_temporal_data)
+
+    add_executable(test_analyze_department_employees tests/test_analyze_department_employees.cpp)
+    target_link_libraries(test_analyze_department_employees PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_analyze_department_employees PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_analyze_department_employees COMMAND test_analyze_department_employees)
+
+    add_executable(test_analyze_social_network tests/test_analyze_social_network.cpp)
+    target_link_libraries(test_analyze_social_network PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_analyze_social_network PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_analyze_social_network COMMAND test_analyze_social_network)
+
+    add_executable(test_calculate_order_metrics tests/test_calculate_order_metrics.cpp)
+    target_link_libraries(test_calculate_order_metrics PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_calculate_order_metrics PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_calculate_order_metrics COMMAND test_calculate_order_metrics)
+
+    add_executable(test_group_by_with_aggregations tests/test_group_by_with_aggregations.cpp)
+    target_link_libraries(test_group_by_with_aggregations PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_group_by_with_aggregations PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_group_by_with_aggregations COMMAND test_group_by_with_aggregations)
+
+    add_executable(test_update_set_operations tests/test_update_set_operations.cpp)
+    target_link_libraries(test_update_set_operations PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_update_set_operations PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_update_set_operations COMMAND test_update_set_operations)
+
+    add_executable(test_column_is_null_checks tests/test_column_is_null_checks.cpp)
+    target_link_libraries(test_column_is_null_checks PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_column_is_null_checks PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_column_is_null_checks COMMAND test_column_is_null_checks)
+
+    add_executable(test_limit_recent_events tests/test_limit_recent_events.cpp)
+    target_link_libraries(test_limit_recent_events PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_limit_recent_events PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_limit_recent_events COMMAND test_limit_recent_events)
+
+    add_executable(test_full_join_suppliers_products tests/test_full_join_suppliers_products.cpp)
+    target_link_libraries(test_full_join_suppliers_products PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_full_join_suppliers_products PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_full_join_suppliers_products COMMAND test_full_join_suppliers_products)
+
+    add_executable(test_right_join_departments_projects tests/test_right_join_departments_projects.cpp)
+    target_link_libraries(test_right_join_departments_projects PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_right_join_departments_projects PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_right_join_departments_projects COMMAND test_right_join_departments_projects)
+
+    add_executable(test_join_orders_customers_payments tests/test_join_orders_customers_payments.cpp)
+    target_link_libraries(test_join_orders_customers_payments PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_join_orders_customers_payments PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_join_orders_customers_payments COMMAND test_join_orders_customers_payments)
+
+    add_executable(test_trim_and_length_validation tests/test_trim_and_length_validation.cpp)
+    target_link_libraries(test_trim_and_length_validation PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_trim_and_length_validation PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_trim_and_length_validation COMMAND test_trim_and_length_validation)
+
+    add_executable(test_replace_text_in_notes tests/test_replace_text_in_notes.cpp)
+    target_link_libraries(test_replace_text_in_notes PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_replace_text_in_notes PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_replace_text_in_notes COMMAND test_replace_text_in_notes)
+
+    add_executable(test_generate_sql_dry_run tests/test_generate_sql_dry_run.cpp)
+    target_link_libraries(test_generate_sql_dry_run PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_generate_sql_dry_run PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_generate_sql_dry_run COMMAND test_generate_sql_dry_run)
+
+    add_executable(test_create_view_order_summary tests/test_create_view_order_summary.cpp)
+    target_link_libraries(test_create_view_order_summary PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_create_view_order_summary PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_create_view_order_summary COMMAND test_create_view_order_summary)
+
+    add_executable(test_weekday_sales_analysis tests/test_weekday_sales_analysis.cpp)
+    target_link_libraries(test_weekday_sales_analysis PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_weekday_sales_analysis PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_weekday_sales_analysis COMMAND test_weekday_sales_analysis)
+
+    add_executable(test_select_from_read_to_vector tests/test_select_from_read_to_vector.cpp)
+    target_link_libraries(test_select_from_read_to_vector PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_select_from_read_to_vector PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_select_from_read_to_vector COMMAND test_select_from_read_to_vector)
+
+    add_executable(test_upsert_inventory_items tests/test_upsert_inventory_items.cpp)
+    target_link_libraries(test_upsert_inventory_items PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_upsert_inventory_items PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_upsert_inventory_items COMMAND test_upsert_inventory_items)
+
+    add_executable(test_inventory_bulk_write_and_read tests/test_inventory_bulk_write_and_read.cpp)
+    target_link_libraries(test_inventory_bulk_write_and_read PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_inventory_bulk_write_and_read PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_inventory_bulk_write_and_read COMMAND test_inventory_bulk_write_and_read)
+
+    add_executable(test_project_time_tracking tests/test_project_time_tracking.cpp)
+    target_link_libraries(test_project_time_tracking PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_project_time_tracking PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_project_time_tracking COMMAND test_project_time_tracking)
+
+    add_executable(test_read_single_record_by_id tests/test_read_single_record_by_id.cpp)
+    target_link_libraries(test_read_single_record_by_id PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_read_single_record_by_id PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_read_single_record_by_id COMMAND test_read_single_record_by_id)
+
+    add_executable(test_cascade_delete_demo tests/test_cascade_delete_demo.cpp)
+    target_link_libraries(test_cascade_delete_demo PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_cascade_delete_demo PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_cascade_delete_demo COMMAND test_cascade_delete_demo)
+
+    # 12.18 Update
+    add_executable(test_update_with_arithmetic tests/test_update_with_arithmetic.cpp)
+    target_link_libraries(test_update_with_arithmetic PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_update_with_arithmetic PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_update_with_arithmetic COMMAND test_update_with_arithmetic)
+
+    add_executable(test_like_pattern_matching tests/test_like_pattern_matching.cpp)
+    target_link_libraries(test_like_pattern_matching PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_like_pattern_matching PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_like_pattern_matching COMMAND test_like_pattern_matching)
+
+#    add_executable(test_manage_student_schedules tests/test_manage_student_schedules.cpp)
+#    target_link_libraries(test_manage_student_schedules PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+#    target_include_directories(test_manage_student_schedules PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+#    add_test(NAME test_manage_student_schedules COMMAND test_manage_student_schedules)
+
+    add_executable(test_order_by_descending tests/test_order_by_descending.cpp)
+    target_link_libraries(test_order_by_descending PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_order_by_descending PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_order_by_descending COMMAND test_order_by_descending)
+
+    add_executable(test_read_to_select_from_usage tests/test_read_to_select_from_usage.cpp)
+    target_link_libraries(test_read_to_select_from_usage PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_read_to_select_from_usage PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_read_to_select_from_usage COMMAND test_read_to_select_from_usage)
+
+#    add_executable(test_track_project_tasks tests/test_track_project_tasks.cpp)
+#    target_link_libraries(test_track_project_tasks PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+#    target_include_directories(test_track_project_tasks PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+#    add_test(NAME test_track_project_tasks COMMAND test_track_project_tasks)
+
+    add_executable(test_aggregation_arithmetic tests/test_aggregation_arithmetic.cpp)
+    target_link_libraries(test_aggregation_arithmetic PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_aggregation_arithmetic PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_aggregation_arithmetic COMMAND test_aggregation_arithmetic)
+
+    add_executable(test_coalesce_function tests/test_coalesce_function.cpp)
+    target_link_libraries(test_coalesce_function PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_coalesce_function PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_coalesce_function COMMAND test_coalesce_function)
+
+    add_executable(test_concat_function tests/test_concat_function.cpp)
+    target_link_libraries(test_concat_function PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_concat_function PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_concat_function COMMAND test_concat_function)
+
+    add_executable(test_create_index_basic tests/test_create_index_basic.cpp)
+    target_link_libraries(test_create_index_basic PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_create_index_basic PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_create_index_basic COMMAND test_create_index_basic)
+
+    add_executable(test_create_table_as_select tests/test_create_table_as_select.cpp)
+    target_link_libraries(test_create_table_as_select PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_create_table_as_select PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_create_table_as_select COMMAND test_create_table_as_select)
+
+    add_executable(test_delete_with_complex_condition tests/test_delete_with_complex_condition.cpp)
+    target_link_libraries(test_delete_with_complex_condition PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_delete_with_complex_condition PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_delete_with_complex_condition COMMAND test_delete_with_complex_condition)
+
+    add_executable(test_drop_table_if_exists tests/test_drop_table_if_exists.cpp)
+    target_link_libraries(test_drop_table_if_exists PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_drop_table_if_exists PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_drop_table_if_exists COMMAND test_drop_table_if_exists)
+
+    add_executable(test_get_top_products tests/test_get_top_products.cpp)
+    target_link_libraries(test_get_top_products PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_get_top_products PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_get_top_products COMMAND test_get_top_products)
+
+    add_executable(test_in_operator_usage tests/test_in_operator_usage.cpp)
+    target_link_libraries(test_in_operator_usage PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    target_include_directories(test_in_operator_usage PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    add_test(NAME test_in_operator_usage COMMAND test_in_operator_usage)
+
+#    add_executable(test_left_join_explicit tests/test_left_join_explicit.cpp)
+#    target_link_libraries(test_left_join_explicit PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+#    target_include_directories(test_left_join_explicit PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+#    add_test(NAME test_left_join_explicit COMMAND test_left_join_explicit)
+
+    # 如果需要添加更多测试用例：
+    # add_executable(test_another tests/test_another.cpp)
+    # target_link_libraries(test_another PRIVATE sqlgen GTest::gtest GTest::gtest_main)
+    # target_include_directories(test_another PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    # add_test(NAME test_another COMMAND test_another)
+endif()
+
+# ============================================
+# 打印配置信息
+# ============================================
+message(STATUS "====================================")
+message(STATUS "Project: ${PROJECT_NAME}")
+message(STATUS "C++ Standard: ${CMAKE_CXX_STANDARD}")
+message(STATUS "SQLGEN_MYSQL: ${SQLGEN_MYSQL}")
+message(STATUS "SQLGEN_POSTGRES: ${SQLGEN_POSTGRES}")
+message(STATUS "SQLGEN_SQLITE3: ${SQLGEN_SQLITE3}")
+message(STATUS "BUILD_TESTS: ${BUILD_TESTS}")
+message(STATUS "ENABLE_COVERAGE: ${ENABLE_COVERAGE}")
+message(STATUS "====================================")

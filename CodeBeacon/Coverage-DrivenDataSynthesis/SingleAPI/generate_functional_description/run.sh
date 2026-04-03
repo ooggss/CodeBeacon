@@ -1,0 +1,5 @@
+#!/bin/bash
+python3 generate_functional_description.py functional_description_data_reaction_fix deepseek-v3.2 reaction reaction_6_normalized.json functional_description_generation_cpp.j2 4
+python3 generate_functional_description.py functional_description_data_sqlgen_fix deepseek-v3.2 sqlgen sqlgen_13_normalized.json functional_description_generation_cpp.j2 5
+python3 generate_functional_description.py functional_description_data_hexi_fix deepseek-v3.2 Hexi hexi_4_normalized.json functional_description_generation_cpp.j2 5
+python3 generate_functional_description.py functional_description_data_leann_fix deepseek-v3.2 LEANN leann_2_normalized.json functional_description_generation_python.j2 10

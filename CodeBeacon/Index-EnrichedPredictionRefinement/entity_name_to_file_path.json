@@ -1,0 +1,4302 @@
+{
+    "Hexi": {
+      "no_throw": [
+        "include/hexi/shared.h"
+      ],
+      "allow_throw": [
+        "include/hexi/shared.h",
+        "include/hexi/pmc/stream_base.h"
+      ],
+      "init_empty": [
+        "include/hexi/shared.h"
+      ],
+      "operator->": [
+        "include/hexi/shared.h"
+      ],
+      "raw": [
+        "include/hexi/shared.h"
+      ],
+      "prefixed": [
+        "include/hexi/shared.h"
+      ],
+      "prefixed_varint": [
+        "include/hexi/shared.h"
+      ],
+      "null_terminated": [
+        "include/hexi/shared.h"
+      ],
+      "is_contiguous": [
+        "include/hexi/shared.h"
+      ],
+      "is_non_contiguous": [
+        "include/hexi/shared.h"
+      ],
+      "supported": [
+        "include/hexi/shared.h"
+      ],
+      "unsupported": [
+        "include/hexi/shared.h"
+      ],
+      "except_tag": [
+        "include/hexi/shared.h"
+      ],
+      "allow_throw_t": [
+        "include/hexi/shared.h"
+      ],
+      "no_throw_t": [
+        "include/hexi/shared.h"
+      ],
+      "init_empty_t": [
+        "include/hexi/shared.h"
+      ],
+      "<deduction guide for raw>": [
+        "include/hexi/shared.h"
+      ],
+      "<deduction guide for prefixed>": [
+        "include/hexi/shared.h"
+      ],
+      "<deduction guide for prefixed_varint>": [
+        "include/hexi/shared.h"
+      ],
+      "<deduction guide for null_terminated>": [
+        "include/hexi/shared.h"
+      ],
+      "varint_decode": [
+        "include/hexi/shared.h"
+      ],
+      "varint_encode": [
+        "include/hexi/shared.h"
+      ],
+      "generate_filled": [
+        "include/hexi/shared.h"
+      ],
+      "region_overlap": [
+        "include/hexi/shared.h"
+      ],
+      "big": [
+        "include/hexi/endian.h"
+      ],
+      "little": [
+        "include/hexi/endian.h"
+      ],
+      "native": [
+        "include/hexi/endian.h"
+      ],
+      "to": [
+        "include/hexi/endian.h"
+      ],
+      "from": [
+        "include/hexi/endian.h"
+      ],
+      "be<T>": [
+        "include/hexi/endian.h"
+      ],
+      "be": [
+        "include/hexi/endian.h"
+      ],
+      "le<T>": [
+        "include/hexi/endian.h"
+      ],
+      "le": [
+        "include/hexi/endian.h"
+      ],
+      "adaptor_tag_t": [
+        "include/hexi/endian.h"
+      ],
+      "storage_tag": [
+        "include/hexi/endian.h"
+      ],
+      "as_big_t": [
+        "include/hexi/endian.h"
+      ],
+      "as_little_t": [
+        "include/hexi/endian.h"
+      ],
+      "as_native_t": [
+        "include/hexi/endian.h"
+      ],
+      "conditional_reverse": [
+        "include/hexi/endian.h"
+      ],
+      "little_to_native": [
+        "include/hexi/endian.h"
+      ],
+      "big_to_native": [
+        "include/hexi/endian.h"
+      ],
+      "native_to_little": [
+        "include/hexi/endian.h"
+      ],
+      "native_to_big": [
+        "include/hexi/endian.h"
+      ],
+      "conditional_reverse_inplace": [
+        "include/hexi/endian.h"
+      ],
+      "little_to_native_inplace": [
+        "include/hexi/endian.h"
+      ],
+      "big_to_native_inplace": [
+        "include/hexi/endian.h"
+      ],
+      "native_to_little_inplace": [
+        "include/hexi/endian.h"
+      ],
+      "native_to_big_inplace": [
+        "include/hexi/endian.h"
+      ],
+      "convert": [
+        "include/hexi/endian.h"
+      ],
+      "storage_in": [
+        "include/hexi/endian.h"
+      ],
+      "storage_out": [
+        "include/hexi/endian.h"
+      ],
+      "enforce_read_bounds": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_reader.h"
+      ],
+      "advance_write": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_write_adaptor.h"
+      ],
+      "write": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/buffer_write.h",
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/file_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/binary_stream_writer.h",
+        "include/hexi/pmc/buffer_write_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h",
+        "include/hexi/null_buffer.h"
+      ],
+      "write_container": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_writer.h"
+      ],
+      "read_container": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_reader.h"
+      ],
+      "operator=": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/file_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/binary_stream_reader.h",
+        "include/hexi/pmc/binary_stream_writer.h"
+      ],
+      "serialise": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_writer.h"
+      ],
+      "operator<<": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_writer.h"
+      ],
+      "put": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_writer.h"
+      ],
+      "fill": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_writer.h"
+      ],
+      "deserialise": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_reader.h"
+      ],
+      "operator>>": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_reader.h"
+      ],
+      "get": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_reader.h"
+      ],
+      "skip": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/buffer_read.h",
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/file_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/binary_stream_reader.h",
+        "include/hexi/pmc/buffer_read_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h"
+      ],
+      "view": [
+        "include/hexi/binary_stream.h"
+      ],
+      "span": [
+        "include/hexi/binary_stream.h"
+      ],
+      "can_write_seek": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/buffer_write.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/file_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/binary_stream_writer.h",
+        "include/hexi/pmc/buffer_write_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h",
+        "include/hexi/null_buffer.h"
+      ],
+      "write_seek": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/buffer_write.h",
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/binary_stream_writer.h",
+        "include/hexi/pmc/buffer_write_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h",
+        "include/hexi/null_buffer.h"
+      ],
+      "size": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/buffer_base.h",
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/file_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/stream_base.h",
+        "include/hexi/pmc/binary_stream_writer.h",
+        "include/hexi/pmc/buffer_read_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h",
+        "include/hexi/null_buffer.h"
+      ],
+      "empty": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/buffer_base.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/file_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/stream_base.h",
+        "include/hexi/pmc/binary_stream_writer.h",
+        "include/hexi/pmc/buffer_read_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h",
+        "include/hexi/null_buffer.h"
+      ],
+      "total_write": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_writer.h"
+      ],
+      "buffer": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/buffer.h",
+        "include/hexi/pmc/binary_stream_reader.h",
+        "include/hexi/pmc/binary_stream_writer.h"
+      ],
+      "state": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/stream_base.h"
+      ],
+      "total_read": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_reader.h"
+      ],
+      "read_limit": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_reader.h"
+      ],
+      "read_max": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream_reader.h"
+      ],
+      "good": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/stream_base.h"
+      ],
+      "clear_state": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/stream_base.h"
+      ],
+      "set_error_state": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/stream_base.h"
+      ],
+      "binary_stream<buf_type, exceptions, endianness>": [
+        "include/hexi/binary_stream.h"
+      ],
+      "binary_stream": [
+        "include/hexi/binary_stream.h",
+        "include/hexi/pmc/binary_stream.h"
+      ],
+      "~buffer_base": [
+        "include/hexi/pmc/buffer_base.h"
+      ],
+      "buffer_base": [
+        "include/hexi/pmc/buffer_base.h"
+      ],
+      "read": [
+        "include/hexi/pmc/buffer_read.h",
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/file_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_read_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h",
+        "include/hexi/null_buffer.h"
+      ],
+      "copy": [
+        "include/hexi/pmc/buffer_read.h",
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/file_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_read_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h",
+        "include/hexi/null_buffer.h"
+      ],
+      "operator[]": [
+        "include/hexi/pmc/buffer_read.h",
+        "include/hexi/pmc/buffer.h",
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_read_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h"
+      ],
+      "find_first_of": [
+        "include/hexi/pmc/buffer_read.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/file_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_read_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h"
+      ],
+      "~buffer_read": [
+        "include/hexi/pmc/buffer_read.h"
+      ],
+      "buffer_read": [
+        "include/hexi/pmc/buffer_read.h"
+      ],
+      "reserve": [
+        "include/hexi/pmc/buffer_write.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_write_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h",
+        "include/hexi/null_buffer.h"
+      ],
+      "~buffer_write": [
+        "include/hexi/pmc/buffer_write.h"
+      ],
+      "buffer_write": [
+        "include/hexi/pmc/buffer_write.h"
+      ],
+      "~buffer": [
+        "include/hexi/pmc/buffer.h"
+      ],
+      "allocate": [
+        "include/hexi/allocators/default_allocator.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/allocators/block_allocator.h",
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "deallocate": [
+        "include/hexi/allocators/default_allocator.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/allocators/block_allocator.h",
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "default_allocator": [
+        "include/hexi/allocators/default_allocator.h"
+      ],
+      "operator&": [
+        "include/hexi/stream_adaptors.h"
+      ],
+      "operator()": [
+        "include/hexi/stream_adaptors.h"
+      ],
+      "forward": [
+        "include/hexi/stream_adaptors.h"
+      ],
+      "stream_read_adaptor<stream_type>": [
+        "include/hexi/stream_adaptors.h"
+      ],
+      "stream_read_adaptor": [
+        "include/hexi/stream_adaptors.h"
+      ],
+      "stream_write_adaptor<stream_type>": [
+        "include/hexi/stream_adaptors.h"
+      ],
+      "stream_write_adaptor": [
+        "include/hexi/stream_adaptors.h"
+      ],
+      "clear": [
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/dynamic_buffer.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_read_adaptor.h",
+        "include/hexi/pmc/buffer_write_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h"
+      ],
+      "free": [
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_write_adaptor.h"
+      ],
+      "read_ptr": [
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_read_adaptor.h"
+      ],
+      "write_ptr": [
+        "include/hexi/detail/intrusive_storage.h",
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_write_adaptor.h"
+      ],
+      "read_data": [
+        "include/hexi/detail/intrusive_storage.h"
+      ],
+      "write_data": [
+        "include/hexi/detail/intrusive_storage.h"
+      ],
+      "intrusive_storage": [
+        "include/hexi/detail/intrusive_storage.h"
+      ],
+      "intrusive_node": [
+        "include/hexi/detail/intrusive_storage.h"
+      ],
+      "fetch_buffers": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "link_tail_node": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "unlink_node": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "buffer_from_node": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "move": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "byte_at_index": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "abs_seek_offset": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "back": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "front": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "pop_front": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "push_back": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "block_size": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "block_count": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "get_allocator": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "dynamic_buffer<block_sz, storage_value_type, allocator>": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "~dynamic_buffer<block_sz, storage_value_type, allocator>": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "dynamic_buffer": [
+        "include/hexi/dynamic_buffer.h"
+      ],
+      "exception": [
+        "include/hexi/exception.h"
+      ],
+      "buffer_underrun": [
+        "include/hexi/exception.h"
+      ],
+      "buffer_overflow": [
+        "include/hexi/exception.h"
+      ],
+      "stream_read_limit": [
+        "include/hexi/exception.h"
+      ],
+      "close": [
+        "include/hexi/file_buffer.h"
+      ],
+      "flush": [
+        "include/hexi/file_buffer.h"
+      ],
+      "handle": [
+        "include/hexi/file_buffer.h"
+      ],
+      "error": [
+        "include/hexi/file_buffer.h"
+      ],
+      "file_buffer": [
+        "include/hexi/file_buffer.h"
+      ],
+      "~file_buffer": [
+        "include/hexi/file_buffer.h"
+      ],
+      "static_buffer<storage_type, buf_size>": [
+        "include/hexi/static_buffer.h"
+      ],
+      "resize": [
+        "include/hexi/static_buffer.h"
+      ],
+      "defragment": [
+        "include/hexi/static_buffer.h"
+      ],
+      "full": [
+        "include/hexi/static_buffer.h"
+      ],
+      "begin": [
+        "include/hexi/static_buffer.h"
+      ],
+      "end": [
+        "include/hexi/static_buffer.h"
+      ],
+      "capacity": [
+        "include/hexi/static_buffer.h"
+      ],
+      "data": [
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h"
+      ],
+      "storage": [
+        "include/hexi/static_buffer.h",
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_write_adaptor.h"
+      ],
+      "read_span": [
+        "include/hexi/static_buffer.h"
+      ],
+      "write_span": [
+        "include/hexi/static_buffer.h"
+      ],
+      "static_buffer": [
+        "include/hexi/static_buffer.h"
+      ],
+      "buffer_adaptor<buf_type, space_optimise>": [
+        "include/hexi/buffer_adaptor.h"
+      ],
+      "buffer_adaptor": [
+        "include/hexi/buffer_adaptor.h",
+        "include/hexi/pmc/buffer_adaptor.h"
+      ],
+      "binary_stream_reader": [
+        "include/hexi/pmc/binary_stream_reader.h"
+      ],
+      "set_state": [
+        "include/hexi/pmc/stream_base.h"
+      ],
+      "stream_base": [
+        "include/hexi/pmc/stream_base.h"
+      ],
+      "~stream_base": [
+        "include/hexi/pmc/stream_base.h"
+      ],
+      "binary_stream_writer": [
+        "include/hexi/pmc/binary_stream_writer.h"
+      ],
+      "~binary_stream": [
+        "include/hexi/pmc/binary_stream.h"
+      ],
+      "read_offset": [
+        "include/hexi/pmc/buffer_read_adaptor.h"
+      ],
+      "buffer_read_adaptor<buf_type>": [
+        "include/hexi/pmc/buffer_read_adaptor.h"
+      ],
+      "buffer_read_adaptor": [
+        "include/hexi/pmc/buffer_read_adaptor.h"
+      ],
+      "write_offset": [
+        "include/hexi/pmc/buffer_write_adaptor.h"
+      ],
+      "buffer_write_adaptor<buf_type>": [
+        "include/hexi/pmc/buffer_write_adaptor.h"
+      ],
+      "buffer_write_adaptor": [
+        "include/hexi/pmc/buffer_write_adaptor.h"
+      ],
+      "conditional_clear": [
+        "include/hexi/pmc/buffer_adaptor.h"
+      ],
+      "buffer_adaptor<buf_type, allow_optimise>": [
+        "include/hexi/pmc/buffer_adaptor.h"
+      ],
+      "initialise_free_list": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "push": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "pop": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "block_allocator<_ty, _elements, ValidatePolicy>": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "~block_allocator<_ty, _elements, ValidatePolicy>": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "block_allocator": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "no_validate_dealloc": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "validate_dealloc": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "mem_block": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "(unnamed struct at /data/workspace/Private-Model-Training/ConstructPrivateProject/search_library_usage/20251011121809/EmberEmu_Hexi/Hexi/tests/../include/hexi/allocators/block_allocator.h:75:3)": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "free_block": [
+        "include/hexi/allocators/block_allocator.h"
+      ],
+      "initialise": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "allocator_handle": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "thread_enter": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "thread_exit": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "allocator": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "tls_block_allocator<_ty, _elements, ref_count_policy, entrant_policy>": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "~tls_block_allocator<_ty, _elements, ref_count_policy, entrant_policy>": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "tls_block_allocator": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "safe_entrant": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "no_ref_counting": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "unsafe_entrant": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "ref_counting": [
+        "include/hexi/allocators/tls_block_allocator.h"
+      ],
+      "null_buffer": [
+        "include/hexi/null_buffer.h"
+      ]
+    },
+    "LEANN": {
+      "__all__": [
+        "packages/leann-core/src/leann/__init__.py"
+      ],
+      "logger": [
+        "packages/leann-core/src/leann/api.py",
+        "packages/leann-core/src/leann/chat.py",
+        "packages/leann-core/src/leann/chunking_utils.py",
+        "packages/leann-core/src/leann/embedding_compute.py",
+        "packages/leann-core/src/leann/embedding_server_manager.py",
+        "packages/leann-core/src/leann/metadata_filter.py",
+        "packages/leann-core/src/leann/registry.py"
+      ],
+      "SearchResult": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "get_passage": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "filter_search_results": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "__len__": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "__init__": [
+        "packages/leann-core/src/leann/api.py",
+        "packages/leann-core/src/leann/chat.py",
+        "packages/leann-core/src/leann/cli.py",
+        "packages/leann-core/src/leann/embedding_server_manager.py",
+        "packages/leann-core/src/leann/interactive_utils.py",
+        "packages/leann-core/src/leann/interface.py",
+        "packages/leann-core/src/leann/metadata_filter.py",
+        "packages/leann-core/src/leann/searcher_base.py"
+      ],
+      "PassageManager": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "add_text": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "build_index": [
+        "packages/leann-core/src/leann/api.py",
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "build_index_from_embeddings": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "update_index": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "LeannBuilder": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "search": [
+        "packages/leann-core/src/leann/api.py",
+        "packages/leann-core/src/leann/interface.py",
+        "packages/leann-core/src/leann/searcher_base.py"
+      ],
+      "_find_jsonl_file": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "_grep_search": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "_python_regex_search": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "cleanup": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "__enter__": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "__exit__": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "__del__": [
+        "packages/leann-core/src/leann/api.py",
+        "packages/leann-core/src/leann/searcher_base.py"
+      ],
+      "LeannSearcher": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "ask": [
+        "packages/leann-core/src/leann/api.py",
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "start_interactive": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "LeannChat": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "get_registered_backends": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "compute_embeddings": [
+        "packages/leann-core/src/leann/api.py",
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "compute_embeddings_via_server": [
+        "packages/leann-core/src/leann/api.py"
+      ],
+      "LLMInterface": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "OllamaChat": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "HFChat": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "GeminiChat": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "OpenAIChat": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "AnthropicChat": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "SimulatedChat": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "check_ollama_models": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "check_ollama_model_exists_remotely": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "search_ollama_models_fuzzy": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "suggest_similar_models": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "check_hf_model_exists": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "get_popular_hf_models": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "_get_fallback_hf_models": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "search_hf_models_fuzzy": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "search_hf_models": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "validate_model_and_suggest": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "get_llm": [
+        "packages/leann-core/src/leann/chat.py"
+      ],
+      "_ast_token_warning_shown": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "CODE_EXTENSIONS": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "estimate_token_count": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "calculate_safe_chunk_size": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "validate_chunk_token_limits": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "detect_code_files": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "get_language_from_extension": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "create_ast_chunks": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "create_traditional_chunks": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "_traditional_chunks_as_dicts": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "create_text_chunks": [
+        "packages/leann-core/src/leann/chunking_utils.py"
+      ],
+      "get_index_path": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "index_exists": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "create_parser": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "register_project_dir": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "_build_gitignore_parser": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "_should_exclude_file": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "_is_git_submodule": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "list_indexes": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "_discover_indexes_in_project": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "remove_index": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "_find_all_matching_indexes": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "_remove_single_match": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "_remove_from_multiple_matches": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "_delete_index_directory": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "load_documents": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "search_documents": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "ask_questions": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "run": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "LeannCLI": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "suppress_cpp_output": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "extract_pdf_text_with_pymupdf": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "extract_pdf_text_with_pdfplumber": [
+        "packages/leann-core/src/leann/cli.py"
+      ],
+      "main": [
+        "packages/leann-core/src/leann/cli.py",
+        "packages/leann-core/src/leann/mcp.py"
+      ],
+      "LOG_LEVEL": [
+        "packages/leann-core/src/leann/embedding_compute.py",
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "log_level": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "EMBEDDING_MODEL_LIMITS": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "_token_limit_cache": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "_model_cache": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "get_model_token_limit": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "truncate_to_token_limit": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "_query_ollama_context_limit": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "_query_lmstudio_context_limit": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "compute_embeddings_sentence_transformers": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "compute_embeddings_openai": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "compute_embeddings_mlx": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "compute_embeddings_ollama": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "compute_embeddings_gemini": [
+        "packages/leann-core/src/leann/embedding_compute.py"
+      ],
+      "start_server": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_build_config_signature": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_start_server_colab": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_start_new_server": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_build_server_command": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_launch_server_process": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_wait_for_server_ready": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "stop_server": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_finalize_process": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_adopt_existing_server": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_launch_server_process_colab": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_wait_for_server_ready_colab": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "EmbeddingServerManager": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_is_colab_environment": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_get_available_port": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_check_port": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_safe_resolve": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_safe_stat_signature": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "_build_passages_signature": [
+        "packages/leann-core/src/leann/embedding_server_manager.py"
+      ],
+      "HAS_READLINE": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "readline": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "setup_readline": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "_show_help": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "_show_history": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "get_user_input": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "run_interactive_loop": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "InteractiveSession": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "create_cli_session": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "create_api_session": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "create_rag_session": [
+        "packages/leann-core/src/leann/interactive_utils.py"
+      ],
+      "build": [
+        "packages/leann-core/src/leann/interface.py"
+      ],
+      "LeannBackendBuilderInterface": [
+        "packages/leann-core/src/leann/interface.py"
+      ],
+      "_ensure_server_running": [
+        "packages/leann-core/src/leann/interface.py",
+        "packages/leann-core/src/leann/searcher_base.py"
+      ],
+      "compute_query_embedding": [
+        "packages/leann-core/src/leann/interface.py",
+        "packages/leann-core/src/leann/searcher_base.py"
+      ],
+      "LeannBackendSearcherInterface": [
+        "packages/leann-core/src/leann/interface.py"
+      ],
+      "builder": [
+        "packages/leann-core/src/leann/interface.py"
+      ],
+      "searcher": [
+        "packages/leann-core/src/leann/interface.py"
+      ],
+      "LeannBackendFactoryInterface": [
+        "packages/leann-core/src/leann/interface.py"
+      ],
+      "handle_request": [
+        "packages/leann-core/src/leann/mcp.py"
+      ],
+      "FilterValue": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "FilterSpec": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "MetadataFilters": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "apply_filters": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_evaluate_filters": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_evaluate_field_filter": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_equals": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_not_equals": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_less_than": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_less_than_or_equal": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_greater_than": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_greater_than_or_equal": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_in": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_not_in": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_contains": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_starts_with": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_ends_with": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_is_true": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_is_false": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "_numeric_compare": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "MetadataFilterEngine": [
+        "packages/leann-core/src/leann/metadata_filter.py"
+      ],
+      "BACKEND_REGISTRY": [
+        "packages/leann-core/src/leann/registry.py"
+      ],
+      "register_backend": [
+        "packages/leann-core/src/leann/registry.py"
+      ],
+      "autodiscover_backends": [
+        "packages/leann-core/src/leann/registry.py"
+      ],
+      "register_project_directory": [
+        "packages/leann-core/src/leann/registry.py"
+      ],
+      "_load_meta": [
+        "packages/leann-core/src/leann/searcher_base.py"
+      ],
+      "_compute_embedding_via_server": [
+        "packages/leann-core/src/leann/searcher_base.py"
+      ],
+      "BaseSearcher": [
+        "packages/leann-core/src/leann/searcher_base.py"
+      ],
+      "_DEFAULT_OLLAMA_HOST": [
+        "packages/leann-core/src/leann/settings.py"
+      ],
+      "_DEFAULT_OPENAI_BASE_URL": [
+        "packages/leann-core/src/leann/settings.py"
+      ],
+      "_DEFAULT_ANTHROPIC_BASE_URL": [
+        "packages/leann-core/src/leann/settings.py"
+      ],
+      "_clean_url": [
+        "packages/leann-core/src/leann/settings.py"
+      ],
+      "resolve_ollama_host": [
+        "packages/leann-core/src/leann/settings.py"
+      ],
+      "resolve_openai_base_url": [
+        "packages/leann-core/src/leann/settings.py"
+      ],
+      "resolve_anthropic_base_url": [
+        "packages/leann-core/src/leann/settings.py"
+      ],
+      "resolve_openai_api_key": [
+        "packages/leann-core/src/leann/settings.py"
+      ],
+      "resolve_anthropic_api_key": [
+        "packages/leann-core/src/leann/settings.py"
+      ],
+      "encode_provider_options": [
+        "packages/leann-core/src/leann/settings.py"
+      ]
+    },
+    "reaction": {
+      "getInstance": [
+        "include/reaction/concurrency/thread_manager.h",
+        "include/reaction/graph/observer_graph.h",
+        "include/reaction/graph/field_graph.h"
+      ],
+      "isThreadSafetyEnabled": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "enableThreadSafety": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "resetForTesting": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "registerThread": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "getThreadCount": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "forceRegisterCurrentThread": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "operator=": [
+        "include/reaction/concurrency/thread_manager.h",
+        "include/reaction/cache/cache_base.h",
+        "include/reaction/concurrency/global_state.h",
+        "include/reaction/memory/stack_monitor.h",
+        "include/reaction/memory/sbo_resource.h",
+        "include/reaction/core/resource.h",
+        "include/reaction/core/react.h"
+      ],
+      "ThreadManager": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "~ThreadManager": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "ThreadRegistrationGuard": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "lock": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "unlock": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "try_lock": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "lock_shared": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "unlock_shared": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "try_lock_shared": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "ConditionalMutexWrapper": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "ConditionalLockGuard<Mutex>": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "~ConditionalLockGuard<Mutex>": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "ConditionalLockGuard": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "ConditionalSharedLockGuard<Mutex>": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "~ConditionalSharedLockGuard<Mutex>": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "ConditionalSharedLockGuard": [
+        "include/reaction/concurrency/thread_manager.h"
+      ],
+      "getErrorCode": [
+        "include/reaction/core/exception.h"
+      ],
+      "getFile": [
+        "include/reaction/core/exception.h"
+      ],
+      "getLine": [
+        "include/reaction/core/exception.h"
+      ],
+      "getFunction": [
+        "include/reaction/core/exception.h"
+      ],
+      "getOriginalMessage": [
+        "include/reaction/core/exception.h"
+      ],
+      "errorCodeToString": [
+        "include/reaction/core/exception.h"
+      ],
+      "formatMessage": [
+        "include/reaction/core/exception.h"
+      ],
+      "ReactionException": [
+        "include/reaction/core/exception.h"
+      ],
+      "getSourceName": [
+        "include/reaction/core/exception.h"
+      ],
+      "getTargetName": [
+        "include/reaction/core/exception.h"
+      ],
+      "DependencyCycleException": [
+        "include/reaction/core/exception.h"
+      ],
+      "getNodeName": [
+        "include/reaction/core/exception.h"
+      ],
+      "SelfObservationException": [
+        "include/reaction/core/exception.h"
+      ],
+      "getContext": [
+        "include/reaction/core/exception.h"
+      ],
+      "NullPointerAccessException": [
+        "include/reaction/core/exception.h"
+      ],
+      "getResourceType": [
+        "include/reaction/core/exception.h"
+      ],
+      "ResourceNotInitializedException": [
+        "include/reaction/core/exception.h"
+      ],
+      "getExpectedType": [
+        "include/reaction/core/exception.h"
+      ],
+      "getActualType": [
+        "include/reaction/core/exception.h"
+      ],
+      "TypeMismatchException": [
+        "include/reaction/core/exception.h"
+      ],
+      "getCurrentState": [
+        "include/reaction/core/exception.h"
+      ],
+      "getRequiredState": [
+        "include/reaction/core/exception.h"
+      ],
+      "InvalidStateException": [
+        "include/reaction/core/exception.h"
+      ],
+      "getOperation": [
+        "include/reaction/core/exception.h"
+      ],
+      "ThreadSafetyViolationException": [
+        "include/reaction/core/exception.h"
+      ],
+      "getConflictDescription": [
+        "include/reaction/core/exception.h"
+      ],
+      "BatchOperationConflictException": [
+        "include/reaction/core/exception.h"
+      ],
+      "operator()": [
+        "include/reaction/expression/atomic_operations.h",
+        "include/reaction/expression/operators.h",
+        "include/reaction/core/types.h",
+        "include/reaction/cache/cache_base.h",
+        "include/reaction/graph/batch.h",
+        "include/reaction/expression/expression_types.h",
+        "include/reaction/core/react.h",
+        "include/reaction/core/id_generator.h"
+      ],
+      "AddAssignOp": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "SubtractAssignOp": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "MultiplyAssignOp": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "DivideAssignOp": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "ModuloAssignOp": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "BitwiseAndAssignOp": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "BitwiseOrAssignOp": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "BitwiseXorAssignOp": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "LeftShiftAssignOp": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "RightShiftAssignOp": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicCompoundAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicAddAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicSubtractAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicMultiplyAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicDivideAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicModuloAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicBitwiseAndAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicBitwiseOrAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicBitwiseXorAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicLeftShiftAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicRightShiftAssign": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicIncrement": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicPostIncrement": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicDecrement": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "atomicPostDecrement": [
+        "include/reaction/expression/atomic_operations.h"
+      ],
+      "BinaryOperatorBase": [
+        "include/reaction/expression/operators.h"
+      ],
+      "UnaryOperatorBase": [
+        "include/reaction/expression/operators.h"
+      ],
+      "apply": [
+        "include/reaction/expression/operators.h"
+      ],
+      "AddOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "MulOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "SubOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "DivOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "EqOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "NeOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "LtOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "GtOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "LeOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "GeOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "AndOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "OrOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "NegOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "NotOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "BitNotOp": [
+        "include/reaction/expression/operators.h"
+      ],
+      "": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "make_binary_expr": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "make_unary_expr": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "make_binary_op": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator+": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator*": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator-": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator/": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator==": [
+        "include/reaction/expression/expression_builders.h",
+        "include/reaction/core/react.h",
+        "include/reaction/core/id_generator.h"
+      ],
+      "operator!=": [
+        "include/reaction/expression/expression_builders.h",
+        "include/reaction/core/id_generator.h"
+      ],
+      "operator<": [
+        "include/reaction/expression/expression_builders.h",
+        "include/reaction/core/react.h",
+        "include/reaction/core/id_generator.h"
+      ],
+      "operator>": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator<=": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator>=": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator&&": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator||": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "make_unary_op": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator!": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "operator~": [
+        "include/reaction/expression/expression_builders.h"
+      ],
+      "ReactTraits": [
+        "include/reaction/core/concept.h"
+      ],
+      "ExpressionTraits": [
+        "include/reaction/core/concept.h"
+      ],
+      "BinaryOpExprTraits": [
+        "include/reaction/core/concept.h"
+      ],
+      "UnaryOpExprTraits": [
+        "include/reaction/core/concept.h"
+      ],
+      "operator type-parameter-0-0": [
+        "include/reaction/core/concept.h"
+      ],
+      "AnyTp": [
+        "include/reaction/core/concept.h"
+      ],
+      "WeakPtrHash": [
+        "include/reaction/core/types.h"
+      ],
+      "WeakPtrEqual": [
+        "include/reaction/core/types.h"
+      ],
+      "valueChanged": [
+        "include/reaction/core/observer_node.h",
+        "include/reaction/expression/expression.h"
+      ],
+      "changedNoNotify": [
+        "include/reaction/core/observer_node.h",
+        "include/reaction/expression/expression.h"
+      ],
+      "updateDepth": [
+        "include/reaction/core/observer_node.h"
+      ],
+      "updateObservers": [
+        "include/reaction/core/observer_node.h"
+      ],
+      "addOneObserver": [
+        "include/reaction/core/observer_node.h"
+      ],
+      "notify": [
+        "include/reaction/core/observer_node.h"
+      ],
+      "~ObserverNode": [
+        "include/reaction/core/observer_node.h"
+      ],
+      "ObserverNode": [
+        "include/reaction/core/observer_node.h"
+      ],
+      "getCachedValue": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "cacheValue": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "invalidateAllEntries": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "getCurrentVersion": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "getStatsInternal": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "triggerCleanupInternal": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "cleanupOldEntriesInternal": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "CacheBase<Key, Value, Hash, KeyEqual>": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "CacheBase": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "Stats": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "CacheEntry": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "isValidCacheSize": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "calculateOptimalCacheSize": [
+        "include/reaction/cache/cache_base.h"
+      ],
+      "hash": [
+        "include/reaction/cache/cache_base.h",
+        "include/reaction/core/react.h",
+        "include/reaction/core/id_generator.h"
+      ],
+      "getCachedImmediateObservers": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "cacheImmediateObservers": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "invalidateAll": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "getStats": [
+        "include/reaction/cache/graph_cache.h",
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "triggerCleanup": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "GraphTraversalCache": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "getCachedCycleResult": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "cacheCycleResult": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "CycleDetectionCache": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "getCachedNodeExists": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "getCachedNodeMetrics": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "cacheNodeMetrics": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "NodeMetricsCache": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "NodeMetrics": [
+        "include/reaction/cache/graph_cache.h"
+      ],
+      "addNode": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "addObserver": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "registerActiveBatch": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "unregisterActiveBatch": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "isNodeInActiveBatch": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "resetNode": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "updateObserversTransactional": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "saveNodeStateForRollback": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "closeNode": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "collectObservers": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "setName": [
+        "include/reaction/graph/observer_graph.h",
+        "include/reaction/core/react.h"
+      ],
+      "getName": [
+        "include/reaction/graph/observer_graph.h",
+        "include/reaction/core/react.h"
+      ],
+      "triggerCacheCleanup": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "getCacheStats": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "getNameInternal": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "addNodeInternal": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "cascadeCloseDependents": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "closeNodeInternal": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "hasCycle": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "dfs": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "resetNodeInternal": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "addObserverInternal": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "ObserverGraph": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "CacheStats": [
+        "include/reaction/graph/observer_graph.h"
+      ],
+      "g_reg_fun": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "g_batch_fun": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "g_batch_execute": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "ScopedValue<T>": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "~ScopedValue<T>": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "ScopedValue": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "RegFunGuard": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "BatchFunGuard": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "BatchExeGuard": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "isDependencyTrackingActive": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "isBatchActive": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "isBatchFunctionActive": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "resetGlobalState": [
+        "include/reaction/concurrency/global_state.h"
+      ],
+      "SBOTraits": [
+        "include/reaction/memory/memory_config.h"
+      ],
+      "SBOConfig": [
+        "include/reaction/memory/memory_config.h"
+      ],
+      "current_usage": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "monitoring_enabled": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "initialize": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "getCurrentUsage": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "canAllocate": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "setMonitoringEnabled": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "isMonitoringEnabled": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "StackMonitor": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "success": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "StackGuard<Size>": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "~StackGuard<Size>": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "StackGuard": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "UsageStats": [
+        "include/reaction/memory/stack_monitor.h"
+      ],
+      "Batch": [
+        "include/reaction/graph/batch.h"
+      ],
+      "close": [
+        "include/reaction/graph/batch.h",
+        "include/reaction/core/react.h"
+      ],
+      "isClosed": [
+        "include/reaction/graph/batch.h"
+      ],
+      "execute": [
+        "include/reaction/graph/batch.h"
+      ],
+      "~Batch": [
+        "include/reaction/graph/batch.h"
+      ],
+      "BatchCompare": [
+        "include/reaction/graph/batch.h"
+      ],
+      "SBOResource<Type>": [
+        "include/reaction/memory/sbo_resource.h"
+      ],
+      "getValue": [
+        "include/reaction/memory/sbo_resource.h",
+        "include/reaction/core/resource.h",
+        "include/reaction/expression/expression_types.h"
+      ],
+      "updateValue": [
+        "include/reaction/memory/sbo_resource.h",
+        "include/reaction/core/resource.h"
+      ],
+      "getRawPtr": [
+        "include/reaction/memory/sbo_resource.h",
+        "include/reaction/core/resource.h"
+      ],
+      "isUsingSBO": [
+        "include/reaction/memory/sbo_resource.h",
+        "include/reaction/core/resource.h"
+      ],
+      "getStorageInfo": [
+        "include/reaction/memory/sbo_resource.h"
+      ],
+      "atomicOperation": [
+        "include/reaction/memory/sbo_resource.h",
+        "include/reaction/core/resource.h"
+      ],
+      "initializeWith": [
+        "include/reaction/memory/sbo_resource.h"
+      ],
+      "initializeWithImpl": [
+        "include/reaction/memory/sbo_resource.h"
+      ],
+      "destroy": [
+        "include/reaction/memory/sbo_resource.h"
+      ],
+      "Storage": [
+        "include/reaction/memory/sbo_resource.h"
+      ],
+      "~Storage": [
+        "include/reaction/memory/sbo_resource.h"
+      ],
+      "~SBOResource<Type>": [
+        "include/reaction/memory/sbo_resource.h"
+      ],
+      "SBOResource": [
+        "include/reaction/memory/sbo_resource.h",
+        "include/reaction/core/resource.h"
+      ],
+      "StorageInfo": [
+        "include/reaction/memory/sbo_resource.h"
+      ],
+      "Resource": [
+        "include/reaction/core/resource.h"
+      ],
+      "ResourceImpl<Type>": [
+        "include/reaction/core/resource.h"
+      ],
+      "ResourceImpl": [
+        "include/reaction/core/resource.h"
+      ],
+      "Void": [
+        "include/reaction/core/resource.h"
+      ],
+      "evaluate": [
+        "include/reaction/expression/expression_types.h",
+        "include/reaction/expression/expression.h"
+      ],
+      "ExpressionBase": [
+        "include/reaction/expression/expression_types.h"
+      ],
+      "ValueWrapper<T>": [
+        "include/reaction/expression/expression_types.h"
+      ],
+      "ValueWrapper": [
+        "include/reaction/expression/expression_types.h"
+      ],
+      "UnaryOpExpr<Op, T>": [
+        "include/reaction/expression/expression_types.h"
+      ],
+      "getOperand": [
+        "include/reaction/expression/expression_types.h"
+      ],
+      "UnaryOpExpr": [
+        "include/reaction/expression/expression_types.h"
+      ],
+      "BinaryOpExpr<Op, L, R>": [
+        "include/reaction/expression/expression_types.h"
+      ],
+      "getLeft": [
+        "include/reaction/expression/expression_types.h"
+      ],
+      "getRight": [
+        "include/reaction/expression/expression_types.h"
+      ],
+      "BinaryOpExpr": [
+        "include/reaction/expression/expression_types.h"
+      ],
+      "addObj": [
+        "include/reaction/graph/field_graph.h"
+      ],
+      "deleteObj": [
+        "include/reaction/graph/field_graph.h"
+      ],
+      "bindField": [
+        "include/reaction/graph/field_graph.h"
+      ],
+      "FieldGraph": [
+        "include/reaction/graph/field_graph.h"
+      ],
+      "checkTrig": [
+        "include/reaction/policy/trigger.h"
+      ],
+      "TriggerBase": [
+        "include/reaction/policy/trigger.h"
+      ],
+      "checkTrigImpl": [
+        "include/reaction/policy/trigger.h"
+      ],
+      "AlwaysTrig": [
+        "include/reaction/policy/trigger.h"
+      ],
+      "setChanged": [
+        "include/reaction/policy/trigger.h"
+      ],
+      "ChangeTrig": [
+        "include/reaction/policy/trigger.h"
+      ],
+      "filter": [
+        "include/reaction/policy/trigger.h",
+        "include/reaction/core/react.h"
+      ],
+      "createFun": [
+        "include/reaction/policy/trigger.h",
+        "include/reaction/expression/expression.h"
+      ],
+      "FilterTrig": [
+        "include/reaction/policy/trigger.h"
+      ],
+      "setSource": [
+        "include/reaction/expression/expression.h"
+      ],
+      "addObCb": [
+        "include/reaction/expression/expression.h"
+      ],
+      "handleChange": [
+        "include/reaction/expression/expression.h"
+      ],
+      "evaluateInternal": [
+        "include/reaction/expression/expression.h"
+      ],
+      "CalcExprBase": [
+        "include/reaction/expression/expression.h"
+      ],
+      "Expression": [
+        "include/reaction/expression/expression.h"
+      ],
+      "VarExpr": [
+        "include/reaction/expression/expression.h"
+      ],
+      "CalcExpr": [
+        "include/reaction/expression/expression.h"
+      ],
+      "setValue": [
+        "include/reaction/expression/expression.h"
+      ],
+      "Expression<reaction::CalcExpr, BinaryOpExpr<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>, type-parameter-0-3>": [
+        "include/reaction/expression/expression.h"
+      ],
+      "setOpExpr": [
+        "include/reaction/expression/expression.h"
+      ],
+      "Expression<reaction::CalcExpr, UnaryOpExpr<type-parameter-0-0, type-parameter-0-1>, type-parameter-0-2>": [
+        "include/reaction/expression/expression.h"
+      ],
+      "handleInvalid": [
+        "include/reaction/policy/invalidation.h"
+      ],
+      "InvalidationBase": [
+        "include/reaction/policy/invalidation.h"
+      ],
+      "handleInvalidImpl": [
+        "include/reaction/policy/invalidation.h"
+      ],
+      "CloseHandle": [
+        "include/reaction/policy/invalidation.h"
+      ],
+      "KeepHandle": [
+        "include/reaction/policy/invalidation.h"
+      ],
+      "LastHandle": [
+        "include/reaction/policy/invalidation.h"
+      ],
+      "get": [
+        "include/reaction/core/react.h"
+      ],
+      "getRaw": [
+        "include/reaction/core/react.h"
+      ],
+      "set": [
+        "include/reaction/core/react.h"
+      ],
+      "value": [
+        "include/reaction/core/react.h",
+        "include/reaction/core/id_generator.h"
+      ],
+      "addWeakRef": [
+        "include/reaction/core/react.h"
+      ],
+      "releaseWeakRef": [
+        "include/reaction/core/react.h"
+      ],
+      "ReactImpl": [
+        "include/reaction/core/react.h"
+      ],
+      "operator->": [
+        "include/reaction/core/react.h"
+      ],
+      "reset": [
+        "include/reaction/core/react.h"
+      ],
+      "operator+=": [
+        "include/reaction/core/react.h"
+      ],
+      "operator-=": [
+        "include/reaction/core/react.h"
+      ],
+      "operator*=": [
+        "include/reaction/core/react.h"
+      ],
+      "operator/=": [
+        "include/reaction/core/react.h"
+      ],
+      "operator%=": [
+        "include/reaction/core/react.h"
+      ],
+      "operator&=": [
+        "include/reaction/core/react.h"
+      ],
+      "operator|=": [
+        "include/reaction/core/react.h"
+      ],
+      "operator^=": [
+        "include/reaction/core/react.h"
+      ],
+      "operator<<=": [
+        "include/reaction/core/react.h"
+      ],
+      "operator>>=": [
+        "include/reaction/core/react.h"
+      ],
+      "operator++": [
+        "include/reaction/core/react.h"
+      ],
+      "operator--": [
+        "include/reaction/core/react.h"
+      ],
+      "getPtr": [
+        "include/reaction/core/react.h"
+      ],
+      "safeAddRef": [
+        "include/reaction/core/react.h"
+      ],
+      "safeReleaseRef": [
+        "include/reaction/core/react.h"
+      ],
+      "React<Expr, Type, IV, TR>": [
+        "include/reaction/core/react.h"
+      ],
+      "~React<Expr, Type, IV, TR>": [
+        "include/reaction/core/react.h"
+      ],
+      "React": [
+        "include/reaction/core/react.h"
+      ],
+      "generate": [
+        "include/reaction/core/id_generator.h"
+      ],
+      "UniqueID": [
+        "include/reaction/core/id_generator.h"
+      ],
+      "field": [
+        "include/reaction/factory/reactive_factory.h"
+      ],
+      "getId": [
+        "include/reaction/factory/reactive_factory.h"
+      ],
+      "FieldBase": [
+        "include/reaction/factory/reactive_factory.h"
+      ],
+      "constVar": [
+        "include/reaction/factory/reactive_factory.h"
+      ],
+      "var": [
+        "include/reaction/factory/reactive_factory.h"
+      ],
+      "expr": [
+        "include/reaction/factory/reactive_factory.h"
+      ],
+      "calc": [
+        "include/reaction/factory/reactive_factory.h"
+      ],
+      "action": [
+        "include/reaction/factory/reactive_factory.h"
+      ],
+      "create": [
+        "include/reaction/factory/reactive_factory.h"
+      ],
+      "batch": [
+        "include/reaction/factory/reactive_factory.h"
+      ],
+      "batchExecute": [
+        "include/reaction/factory/reactive_factory.h"
+      ]
+    },
+    "sqlgen": {
+      "to_lower": [
+        "include/sqlgen/internal/strings/strings.hpp",
+        "src/sqlgen/internal/strings/strings.cpp"
+      ],
+      "to_upper": [
+        "include/sqlgen/internal/strings/strings.hpp",
+        "src/sqlgen/internal/strings/strings.cpp"
+      ],
+      "join": [
+        "include/sqlgen/internal/strings/strings.hpp",
+        "src/sqlgen/internal/strings/strings.cpp",
+        "include/sqlgen/joins.hpp"
+      ],
+      "replace_all": [
+        "include/sqlgen/internal/strings/strings.hpp",
+        "src/sqlgen/internal/strings/strings.cpp"
+      ],
+      "split": [
+        "include/sqlgen/internal/strings/strings.hpp",
+        "src/sqlgen/internal/strings/strings.cpp"
+      ],
+      "ltrim": [
+        "include/sqlgen/internal/strings/strings.hpp",
+        "src/sqlgen/internal/strings/strings.cpp",
+        "include/sqlgen/operations.hpp"
+      ],
+      "rtrim": [
+        "include/sqlgen/internal/strings/strings.hpp",
+        "src/sqlgen/internal/strings/strings.cpp",
+        "include/sqlgen/operations.hpp"
+      ],
+      "trim": [
+        "include/sqlgen/internal/strings/strings.hpp",
+        "include/sqlgen/operations.hpp"
+      ],
+      "error": [
+        "include/sqlgen/Result.hpp"
+      ],
+      "": [
+        "include/sqlgen/Result.hpp",
+        "include/sqlgen/Ref.hpp",
+        "include/sqlgen/Literal.hpp",
+        "include/sqlgen/Timestamp.hpp",
+        "include/sqlgen/group_by.hpp",
+        "include/sqlgen/limit.hpp",
+        "include/sqlgen/order_by.hpp",
+        "include/sqlgen/where.hpp",
+        "include/sqlgen/create_as.hpp",
+        "include/sqlgen/create_index.hpp",
+        "include/sqlgen/create_table.hpp",
+        "include/sqlgen/insert.hpp",
+        "include/sqlgen/update.hpp",
+        "include/sqlgen/Flatten.hpp",
+        "include/sqlgen/Pattern.hpp",
+        "include/sqlgen/exec.hpp",
+        "include/sqlgen/joins.hpp"
+      ],
+      "end": [
+        "include/sqlgen/IteratorBase.hpp",
+        "include/sqlgen/Range.hpp",
+        "include/sqlgen/mysql/Iterator.hpp",
+        "include/sqlgen/postgres/Iterator.hpp",
+        "src/sqlgen/postgres/Iterator.cpp",
+        "include/sqlgen/sqlite/Iterator.hpp",
+        "src/sqlgen/sqlite/Iterator.cpp"
+      ],
+      "next": [
+        "include/sqlgen/IteratorBase.hpp",
+        "include/sqlgen/mysql/Iterator.hpp",
+        "src/sqlgen/mysql/Iterator.cpp",
+        "include/sqlgen/postgres/Iterator.hpp",
+        "src/sqlgen/postgres/Iterator.cpp",
+        "include/sqlgen/sqlite/Iterator.hpp",
+        "src/sqlgen/sqlite/Iterator.cpp"
+      ],
+      "~IteratorBase": [
+        "include/sqlgen/IteratorBase.hpp"
+      ],
+      "IteratorBase": [
+        "include/sqlgen/IteratorBase.hpp"
+      ],
+      "vector": [
+        "include/sqlgen/internal/collect/vector.hpp"
+      ],
+      "ForeignKeyReference": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Properties": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Unknown": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Boolean": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Dynamic": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Float32": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Float64": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Int8": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Int16": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Int32": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Int64": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "JSON": [
+        "include/sqlgen/dynamic/types.hpp",
+        "include/sqlgen/JSON.hpp"
+      ],
+      "UInt8": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "UInt16": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "UInt32": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "UInt64": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Enum": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Text": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Date": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "Timestamp": [
+        "include/sqlgen/dynamic/types.hpp",
+        "include/sqlgen/dynamic/Value.hpp"
+      ],
+      "TimestampWithTZ": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "VarChar": [
+        "include/sqlgen/dynamic/types.hpp"
+      ],
+      "read": [
+        "include/sqlgen/parsing/Parser_default.hpp",
+        "include/sqlgen/parsing/Parser_foreign_key.hpp",
+        "include/sqlgen/parsing/Parser_json.hpp",
+        "include/sqlgen/parsing/Parser_optional.hpp",
+        "include/sqlgen/parsing/Parser_primary_key.hpp",
+        "include/sqlgen/parsing/Parser_shared_ptr.hpp",
+        "include/sqlgen/parsing/Parser_string.hpp",
+        "include/sqlgen/parsing/Parser_timestamp.hpp",
+        "include/sqlgen/parsing/Parser_unique.hpp",
+        "include/sqlgen/parsing/Parser_unique_ptr.hpp",
+        "include/sqlgen/parsing/Parser_varchar.hpp",
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/read.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "include/sqlgen/Session.hpp"
+      ],
+      "write": [
+        "include/sqlgen/parsing/Parser_default.hpp",
+        "include/sqlgen/parsing/Parser_foreign_key.hpp",
+        "include/sqlgen/parsing/Parser_json.hpp",
+        "include/sqlgen/parsing/Parser_optional.hpp",
+        "include/sqlgen/parsing/Parser_primary_key.hpp",
+        "include/sqlgen/parsing/Parser_shared_ptr.hpp",
+        "include/sqlgen/parsing/Parser_string.hpp",
+        "include/sqlgen/parsing/Parser_timestamp.hpp",
+        "include/sqlgen/parsing/Parser_unique.hpp",
+        "include/sqlgen/parsing/Parser_unique_ptr.hpp",
+        "include/sqlgen/parsing/Parser_varchar.hpp",
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "include/sqlgen/Session.hpp",
+        "include/sqlgen/write.hpp"
+      ],
+      "to_type": [
+        "include/sqlgen/parsing/Parser_default.hpp",
+        "include/sqlgen/parsing/Parser_foreign_key.hpp",
+        "include/sqlgen/parsing/Parser_json.hpp",
+        "include/sqlgen/parsing/Parser_optional.hpp",
+        "include/sqlgen/parsing/Parser_primary_key.hpp",
+        "include/sqlgen/parsing/Parser_shared_ptr.hpp",
+        "include/sqlgen/parsing/Parser_string.hpp",
+        "include/sqlgen/parsing/Parser_timestamp.hpp",
+        "include/sqlgen/parsing/Parser_unique.hpp",
+        "include/sqlgen/parsing/Parser_unique_ptr.hpp",
+        "include/sqlgen/parsing/Parser_varchar.hpp",
+        "include/sqlgen/transpilation/make_columns.hpp"
+      ],
+      "Parser": [
+        "include/sqlgen/parsing/Parser_default.hpp",
+        "include/sqlgen/parsing/Parser_string.hpp"
+      ],
+      "alias": [
+        "include/sqlgen/transpilation/Col.hpp"
+      ],
+      "name": [
+        "include/sqlgen/transpilation/Col.hpp",
+        "include/sqlgen/col.hpp",
+        "include/sqlgen/transpilation/fields_to_named_tuple_t.hpp"
+      ],
+      "Col": [
+        "include/sqlgen/transpilation/Col.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "TableWrapper": [
+        "include/sqlgen/transpilation/TableWrapper.hpp"
+      ],
+      "wrapper": [
+        "include/sqlgen/transpilation/get_table_t.hpp",
+        "include/sqlgen/internal/remove_auto_incr_primary_t.hpp",
+        "include/sqlgen/transpilation/flatten_fields_t.hpp"
+      ],
+      "operator||": [
+        "include/sqlgen/transpilation/get_table_t.hpp",
+        "include/sqlgen/transpilation/Condition.hpp"
+      ],
+      "PairWrapper": [
+        "include/sqlgen/transpilation/get_table_t.hpp"
+      ],
+      "value": [
+        "include/sqlgen/transpilation/all_columns_exist.hpp",
+        "include/sqlgen/PrimaryKey.hpp",
+        "include/sqlgen/ForeignKey.hpp",
+        "include/sqlgen/JSON.hpp",
+        "include/sqlgen/Unique.hpp",
+        "include/sqlgen/Varchar.hpp",
+        "include/sqlgen/transpilation/make_field.hpp",
+        "include/sqlgen/transpilation/check_aggregations.hpp",
+        "include/sqlgen/internal/has_constraint.hpp"
+      ],
+      "column_exists_v": [
+        "include/sqlgen/transpilation/all_columns_exist.hpp"
+      ],
+      "all_columns_exist": [
+        "include/sqlgen/transpilation/all_columns_exist.hpp"
+      ],
+      "is_nullable_v": [
+        "include/sqlgen/transpilation/is_nullable.hpp"
+      ],
+      "is_ptr": [
+        "include/sqlgen/transpilation/is_nullable.hpp"
+      ],
+      "is_optional": [
+        "include/sqlgen/transpilation/is_nullable.hpp"
+      ],
+      "is_nullable": [
+        "include/sqlgen/transpilation/is_nullable.hpp"
+      ],
+      "auto_incr": [
+        "include/sqlgen/PrimaryKey.hpp"
+      ],
+      "PrimaryKey<T, _auto_incr>": [
+        "include/sqlgen/PrimaryKey.hpp"
+      ],
+      "get": [
+        "include/sqlgen/PrimaryKey.hpp",
+        "include/sqlgen/ForeignKey.hpp",
+        "include/sqlgen/JSON.hpp",
+        "include/sqlgen/Unique.hpp",
+        "include/sqlgen/Varchar.hpp"
+      ],
+      "operator()": [
+        "include/sqlgen/PrimaryKey.hpp",
+        "include/sqlgen/transpilation/to_duration.hpp",
+        "include/sqlgen/transpilation/to_transpilation_type.hpp",
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/transpilation/Aggregation.hpp",
+        "include/sqlgen/ForeignKey.hpp",
+        "include/sqlgen/JSON.hpp",
+        "include/sqlgen/Unique.hpp",
+        "include/sqlgen/Varchar.hpp",
+        "include/sqlgen/col.hpp",
+        "include/sqlgen/transpilation/to_alias.hpp",
+        "include/sqlgen/transpilation/make_field.hpp",
+        "include/sqlgen/transpilation/to_condition.hpp",
+        "include/sqlgen/transpilation/to_joins.hpp",
+        "include/sqlgen/transpilation/to_group_by.hpp",
+        "include/sqlgen/transpilation/to_order_by.hpp",
+        "include/sqlgen/transpilation/to_table_or_query.hpp",
+        "include/sqlgen/select_from.hpp",
+        "include/sqlgen/create_as.hpp",
+        "include/sqlgen/create_index.hpp",
+        "include/sqlgen/create_table.hpp",
+        "include/sqlgen/delete_from.hpp",
+        "include/sqlgen/drop.hpp",
+        "include/sqlgen/insert.hpp",
+        "include/sqlgen/read.hpp",
+        "include/sqlgen/transpilation/to_sets.hpp",
+        "include/sqlgen/update.hpp",
+        "include/sqlgen/transpilation/to_sql.hpp",
+        "include/sqlgen/as.hpp",
+        "include/sqlgen/begin_transaction.hpp",
+        "include/sqlgen/commit.hpp",
+        "include/sqlgen/exec.hpp",
+        "include/sqlgen/rollback.hpp",
+        "include/sqlgen/write.hpp"
+      ],
+      "operator=": [
+        "include/sqlgen/PrimaryKey.hpp",
+        "include/sqlgen/ForeignKey.hpp",
+        "include/sqlgen/JSON.hpp",
+        "include/sqlgen/Unique.hpp",
+        "include/sqlgen/Varchar.hpp",
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/postgres/Iterator.hpp",
+        "src/sqlgen/postgres/Iterator.cpp",
+        "include/sqlgen/Session.hpp"
+      ],
+      "reflection": [
+        "include/sqlgen/PrimaryKey.hpp",
+        "include/sqlgen/dynamic/Value.hpp",
+        "include/sqlgen/dynamic/Operation.hpp",
+        "include/sqlgen/ForeignKey.hpp",
+        "include/sqlgen/JSON.hpp",
+        "include/sqlgen/Unique.hpp",
+        "include/sqlgen/Varchar.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "set": [
+        "include/sqlgen/PrimaryKey.hpp",
+        "include/sqlgen/ForeignKey.hpp",
+        "include/sqlgen/JSON.hpp",
+        "include/sqlgen/Unique.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "~PrimaryKey<T, _auto_incr>": [
+        "include/sqlgen/PrimaryKey.hpp"
+      ],
+      "PrimaryKey": [
+        "include/sqlgen/PrimaryKey.hpp"
+      ],
+      "is_primary_key_v": [
+        "include/sqlgen/transpilation/is_primary_key.hpp",
+        "include/sqlgen/internal/is_primary_key.hpp"
+      ],
+      "is_primary_key": [
+        "include/sqlgen/transpilation/is_primary_key.hpp",
+        "include/sqlgen/internal/is_primary_key.hpp"
+      ],
+      "RemoveReflection": [
+        "include/sqlgen/transpilation/remove_reflection_t.hpp"
+      ],
+      "As": [
+        "include/sqlgen/transpilation/As.hpp",
+        "include/sqlgen/as.hpp"
+      ],
+      "StringType": [
+        "include/sqlgen/transpilation/string_t.hpp"
+      ],
+      "And": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "Equal": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "GreaterEqual": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "GreaterThan": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "In": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "InVec": [
+        "include/sqlgen/transpilation/conditions.hpp"
+      ],
+      "IsNull": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "IsNotNull": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "LesserEqual": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "LesserThan": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "Like": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "NotEqual": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "Not": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "NotIn": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "NotInVec": [
+        "include/sqlgen/transpilation/conditions.hpp"
+      ],
+      "NotLike": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "Or": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "equal": [
+        "include/sqlgen/transpilation/conditions.hpp"
+      ],
+      "greater_equal": [
+        "include/sqlgen/transpilation/conditions.hpp"
+      ],
+      "greater_than": [
+        "include/sqlgen/transpilation/conditions.hpp"
+      ],
+      "in": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "is_null": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "is_not_null": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "lesser_equal": [
+        "include/sqlgen/transpilation/conditions.hpp"
+      ],
+      "lesser_than": [
+        "include/sqlgen/transpilation/conditions.hpp"
+      ],
+      "like": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "not_equal": [
+        "include/sqlgen/transpilation/conditions.hpp"
+      ],
+      "not_in": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "not_like": [
+        "include/sqlgen/transpilation/conditions.hpp",
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator!": [
+        "include/sqlgen/transpilation/Condition.hpp"
+      ],
+      "operator&&": [
+        "include/sqlgen/transpilation/Condition.hpp"
+      ],
+      "Condition": [
+        "include/sqlgen/transpilation/Condition.hpp",
+        "include/sqlgen/dynamic/Condition.hpp"
+      ],
+      "make_condition": [
+        "include/sqlgen/transpilation/Condition.hpp"
+      ],
+      "is_duration_v": [
+        "include/sqlgen/transpilation/is_duration.hpp"
+      ],
+      "is_duration": [
+        "include/sqlgen/transpilation/is_duration.hpp"
+      ],
+      "Duration": [
+        "include/sqlgen/dynamic/Value.hpp"
+      ],
+      "Float": [
+        "include/sqlgen/dynamic/Value.hpp"
+      ],
+      "Integer": [
+        "include/sqlgen/dynamic/Value.hpp"
+      ],
+      "String": [
+        "include/sqlgen/dynamic/Value.hpp"
+      ],
+      "Value": [
+        "include/sqlgen/dynamic/Value.hpp",
+        "include/sqlgen/transpilation/Value.hpp"
+      ],
+      "ToDuration": [
+        "include/sqlgen/transpilation/to_duration.hpp"
+      ],
+      "to_duration": [
+        "include/sqlgen/transpilation/to_duration.hpp"
+      ],
+      "make_value": [
+        "include/sqlgen/transpilation/Value.hpp"
+      ],
+      "ToTranspilationType": [
+        "include/sqlgen/transpilation/to_transpilation_type.hpp"
+      ],
+      "to_transpilation_type": [
+        "include/sqlgen/transpilation/to_transpilation_type.hpp"
+      ],
+      "TypeHolder": [
+        "include/sqlgen/transpilation/Operation.hpp"
+      ],
+      "as": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/transpilation/Aggregation.hpp",
+        "include/sqlgen/col.hpp",
+        "include/sqlgen/as.hpp"
+      ],
+      "operator==": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/Iterator.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator!=": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/Iterator.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator<": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator<=": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator>": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator>=": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator/": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/transpilation/Aggregation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator-": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/transpilation/Aggregation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator%": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/transpilation/Aggregation.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator*": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/transpilation/Aggregation.hpp",
+        "include/sqlgen/Iterator.hpp",
+        "include/sqlgen/col.hpp"
+      ],
+      "operator+": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/transpilation/Aggregation.hpp",
+        "include/sqlgen/internal/remove_auto_incr_primary_t.hpp",
+        "include/sqlgen/col.hpp",
+        "include/sqlgen/transpilation/table_tuple_t.hpp",
+        "include/sqlgen/transpilation/flatten_fields_t.hpp"
+      ],
+      "Operation": [
+        "include/sqlgen/transpilation/Operation.hpp",
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Aggregation": [
+        "include/sqlgen/transpilation/Aggregation.hpp",
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "All": [
+        "include/sqlgen/transpilation/Aggregation.hpp"
+      ],
+      "Desc": [
+        "include/sqlgen/transpilation/Desc.hpp"
+      ],
+      "Column": [
+        "include/sqlgen/dynamic/Column.hpp"
+      ],
+      "Abs": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Avg": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Count": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Max": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Min": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Sum": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Cast": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Ceil": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Coalesce": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Concat": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Cos": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "DatePlusDuration": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Day": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "DaysBetween": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Divides": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Exp": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Floor": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Hour": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Length": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Ln": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Lower": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "LTrim": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Log2": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Minus": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Minute": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Mod": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Month": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Multiplies": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Plus": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Replace": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Round": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "RTrim": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Second": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Sin": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Sqrt": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Tan": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Trim": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Unixepoch": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Upper": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Weekday": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "Year": [
+        "include/sqlgen/dynamic/Operation.hpp"
+      ],
+      "num_operands_v": [
+        "include/sqlgen/transpilation/dynamic_operator_t.hpp"
+      ],
+      "operator_category_v": [
+        "include/sqlgen/transpilation/dynamic_operator_t.hpp"
+      ],
+      "DynamicOperator": [
+        "include/sqlgen/transpilation/dynamic_operator_t.hpp"
+      ],
+      "is_timestamp_v": [
+        "include/sqlgen/transpilation/is_timestamp.hpp"
+      ],
+      "is_timestamp": [
+        "include/sqlgen/transpilation/is_timestamp.hpp"
+      ],
+      "RemoveNullable": [
+        "include/sqlgen/transpilation/remove_nullable_t.hpp"
+      ],
+      "ForeignKey<T, _ForeignTableType, _col_name>": [
+        "include/sqlgen/ForeignKey.hpp"
+      ],
+      "~ForeignKey<T, _ForeignTableType, _col_name>": [
+        "include/sqlgen/ForeignKey.hpp"
+      ],
+      "ForeignKey": [
+        "include/sqlgen/ForeignKey.hpp"
+      ],
+      "get_tablename": [
+        "include/sqlgen/transpilation/get_tablename.hpp"
+      ],
+      "remove_namespaces": [
+        "include/sqlgen/transpilation/get_tablename.hpp"
+      ],
+      "JSON<T>": [
+        "include/sqlgen/JSON.hpp"
+      ],
+      "~JSON<T>": [
+        "include/sqlgen/JSON.hpp"
+      ],
+      "Unique<T>": [
+        "include/sqlgen/Unique.hpp"
+      ],
+      "~Unique<T>": [
+        "include/sqlgen/Unique.hpp"
+      ],
+      "Unique": [
+        "include/sqlgen/Unique.hpp"
+      ],
+      "Varchar<_size>": [
+        "include/sqlgen/Varchar.hpp"
+      ],
+      "make": [
+        "include/sqlgen/Varchar.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "src/sqlgen/mysql/Connection.cpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "src/sqlgen/postgres/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp",
+        "include/sqlgen/ConnectionPool.hpp"
+      ],
+      "size": [
+        "include/sqlgen/Varchar.hpp",
+        "include/sqlgen/ConnectionPool.hpp"
+      ],
+      "check_size": [
+        "include/sqlgen/Varchar.hpp"
+      ],
+      "~Varchar<_size>": [
+        "include/sqlgen/Varchar.hpp"
+      ],
+      "Varchar": [
+        "include/sqlgen/Varchar.hpp"
+      ],
+      "call_destructor_on_one_if_necessary": [
+        "include/sqlgen/internal/call_destructors_where_necessary.hpp"
+      ],
+      "call_destructors_where_necessary": [
+        "include/sqlgen/internal/call_destructors_where_necessary.hpp"
+      ],
+      "assign_if_field_is_field_i": [
+        "include/sqlgen/internal/from_str_vec.hpp"
+      ],
+      "assign_to_field_i": [
+        "include/sqlgen/internal/from_str_vec.hpp"
+      ],
+      "read_into_view": [
+        "include/sqlgen/internal/from_str_vec.hpp"
+      ],
+      "from_str_vec": [
+        "include/sqlgen/internal/from_str_vec.hpp"
+      ],
+      "operator->": [
+        "include/sqlgen/Iterator.hpp"
+      ],
+      "operator++": [
+        "include/sqlgen/Iterator.hpp"
+      ],
+      "get_next_batch": [
+        "include/sqlgen/Iterator.hpp"
+      ],
+      "Iterator<T>": [
+        "include/sqlgen/Iterator.hpp"
+      ],
+      "~Iterator<T>": [
+        "include/sqlgen/Iterator.hpp"
+      ],
+      "Iterator": [
+        "include/sqlgen/Iterator.hpp",
+        "include/sqlgen/mysql/Iterator.hpp",
+        "src/sqlgen/mysql/Iterator.cpp",
+        "include/sqlgen/postgres/Iterator.hpp",
+        "src/sqlgen/postgres/Iterator.cpp",
+        "include/sqlgen/sqlite/Iterator.hpp",
+        "src/sqlgen/sqlite/Iterator.cpp"
+      ],
+      "End": [
+        "include/sqlgen/Iterator.hpp",
+        "include/sqlgen/Range.hpp"
+      ],
+      "GroupBy": [
+        "include/sqlgen/dynamic/GroupBy.hpp",
+        "include/sqlgen/group_by.hpp",
+        "include/sqlgen/transpilation/group_by_t.hpp"
+      ],
+      "Limit": [
+        "include/sqlgen/dynamic/Limit.hpp"
+      ],
+      "Wrapper": [
+        "include/sqlgen/dynamic/OrderBy.hpp"
+      ],
+      "OrderBy": [
+        "include/sqlgen/dynamic/OrderBy.hpp",
+        "include/sqlgen/order_by.hpp",
+        "include/sqlgen/transpilation/order_by_t.hpp"
+      ],
+      "Table": [
+        "include/sqlgen/dynamic/Table.hpp"
+      ],
+      "SelectFrom": [
+        "include/sqlgen/dynamic/SelectFrom.hpp",
+        "include/sqlgen/select_from.hpp"
+      ],
+      "Field": [
+        "include/sqlgen/dynamic/SelectFrom.hpp"
+      ],
+      "Join": [
+        "include/sqlgen/dynamic/SelectFrom.hpp",
+        "include/sqlgen/transpilation/Join.hpp"
+      ],
+      "CreateAs": [
+        "include/sqlgen/dynamic/CreateAs.hpp",
+        "include/sqlgen/create_as.hpp"
+      ],
+      "CreateIndex": [
+        "include/sqlgen/dynamic/CreateIndex.hpp",
+        "include/sqlgen/create_index.hpp"
+      ],
+      "CreateTable": [
+        "include/sqlgen/dynamic/CreateTable.hpp",
+        "include/sqlgen/create_table.hpp"
+      ],
+      "DeleteFrom": [
+        "include/sqlgen/dynamic/DeleteFrom.hpp",
+        "include/sqlgen/delete_from.hpp"
+      ],
+      "Drop": [
+        "include/sqlgen/dynamic/Drop.hpp",
+        "include/sqlgen/drop.hpp"
+      ],
+      "Insert": [
+        "include/sqlgen/dynamic/Insert.hpp",
+        "include/sqlgen/insert.hpp"
+      ],
+      "Update": [
+        "include/sqlgen/dynamic/Update.hpp",
+        "include/sqlgen/update.hpp"
+      ],
+      "Set": [
+        "include/sqlgen/dynamic/Update.hpp",
+        "include/sqlgen/transpilation/Set.hpp"
+      ],
+      "Write": [
+        "include/sqlgen/dynamic/Write.hpp",
+        "include/sqlgen/write.hpp"
+      ],
+      "MockTable": [
+        "include/sqlgen/internal/MockTable.hpp"
+      ],
+      "begin_transaction": [
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "src/sqlgen/postgres/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp",
+        "include/sqlgen/Session.hpp",
+        "include/sqlgen/begin_transaction.hpp"
+      ],
+      "commit": [
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "src/sqlgen/postgres/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp",
+        "include/sqlgen/Session.hpp",
+        "include/sqlgen/commit.hpp"
+      ],
+      "conn": [
+        "include/sqlgen/Transaction.hpp"
+      ],
+      "execute": [
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp",
+        "include/sqlgen/Session.hpp"
+      ],
+      "insert": [
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/insert.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "include/sqlgen/Session.hpp"
+      ],
+      "rollback": [
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "src/sqlgen/postgres/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp",
+        "include/sqlgen/Session.hpp",
+        "include/sqlgen/rollback.hpp"
+      ],
+      "to_sql": [
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/transpilation/to_sql.hpp",
+        "include/sqlgen/mysql/to_sql.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "include/sqlgen/postgres/to_sql.hpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "include/sqlgen/sqlite/to_sql.hpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "include/sqlgen/Session.hpp"
+      ],
+      "start_write": [
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "src/sqlgen/mysql/Connection.cpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp",
+        "include/sqlgen/Session.hpp"
+      ],
+      "end_write": [
+        "include/sqlgen/Transaction.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "src/sqlgen/mysql/Connection.cpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "src/sqlgen/postgres/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp",
+        "include/sqlgen/Session.hpp"
+      ],
+      "Transaction<_ConnType>": [
+        "include/sqlgen/Transaction.hpp"
+      ],
+      "~Transaction<_ConnType>": [
+        "include/sqlgen/Transaction.hpp"
+      ],
+      "Transaction": [
+        "include/sqlgen/Transaction.hpp"
+      ],
+      "Range": [
+        "include/sqlgen/Range.hpp"
+      ],
+      "Range<type-parameter-0-0>": [
+        "include/sqlgen/Range.hpp"
+      ],
+      "~Range<type-parameter-0-0>": [
+        "include/sqlgen/Range.hpp"
+      ],
+      "begin": [
+        "include/sqlgen/Range.hpp"
+      ],
+      "ValueType": [
+        "include/sqlgen/transpilation/value_t.hpp"
+      ],
+      "is_range_v": [
+        "include/sqlgen/internal/is_range.hpp"
+      ],
+      "is_range": [
+        "include/sqlgen/internal/is_range.hpp"
+      ],
+      "to_container": [
+        "include/sqlgen/internal/to_container.hpp"
+      ],
+      "FieldWrapper": [
+        "include/sqlgen/internal/remove_auto_incr_primary_t.hpp"
+      ],
+      "to_str": [
+        "include/sqlgen/internal/to_str.hpp",
+        "include/sqlgen/postgres/Credentials.hpp"
+      ],
+      "to_str_vec": [
+        "include/sqlgen/internal/to_str_vec.hpp"
+      ],
+      "write_or_insert": [
+        "include/sqlgen/internal/write_or_insert.hpp"
+      ],
+      "Credentials": [
+        "include/sqlgen/mysql/Credentials.hpp",
+        "include/sqlgen/postgres/Credentials.hpp"
+      ],
+      "exec": [
+        "include/sqlgen/mysql/exec.hpp",
+        "src/sqlgen/mysql/exec.cpp",
+        "include/sqlgen/postgres/exec.hpp",
+        "src/sqlgen/postgres/exec.cpp",
+        "include/sqlgen/exec.hpp"
+      ],
+      "col": [
+        "include/sqlgen/col.hpp"
+      ],
+      "desc": [
+        "include/sqlgen/col.hpp",
+        "include/sqlgen/transpilation/order_by_t.hpp"
+      ],
+      "group_by": [
+        "include/sqlgen/group_by.hpp"
+      ],
+      "get_value": [
+        "include/sqlgen/internal/GetColType.hpp"
+      ],
+      "GetColType": [
+        "include/sqlgen/internal/GetColType.hpp"
+      ],
+      "IteratorType": [
+        "include/sqlgen/internal/iterator_t.hpp"
+      ],
+      "limit": [
+        "include/sqlgen/limit.hpp"
+      ],
+      "order_by": [
+        "include/sqlgen/order_by.hpp"
+      ],
+      "to": [
+        "include/sqlgen/to.hpp"
+      ],
+      "To": [
+        "include/sqlgen/to.hpp"
+      ],
+      "DynamicAggregation": [
+        "include/sqlgen/transpilation/dynamic_aggregation_t.hpp"
+      ],
+      "RemoveAs": [
+        "include/sqlgen/transpilation/remove_as_t.hpp"
+      ],
+      "ToAlias": [
+        "include/sqlgen/transpilation/to_alias.hpp"
+      ],
+      "to_alias": [
+        "include/sqlgen/transpilation/to_alias.hpp"
+      ],
+      "to_value": [
+        "include/sqlgen/transpilation/to_value.hpp"
+      ],
+      "is_aggregation": [
+        "include/sqlgen/transpilation/make_field.hpp"
+      ],
+      "is_column": [
+        "include/sqlgen/transpilation/make_field.hpp"
+      ],
+      "is_operation": [
+        "include/sqlgen/transpilation/make_field.hpp"
+      ],
+      "MakeField": [
+        "include/sqlgen/transpilation/make_field.hpp"
+      ],
+      "make_field": [
+        "include/sqlgen/transpilation/make_field.hpp"
+      ],
+      "GetFieldName": [
+        "include/sqlgen/transpilation/fields_to_named_tuple_t.hpp"
+      ],
+      "FieldsToNamedTupleType": [
+        "include/sqlgen/transpilation/fields_to_named_tuple_t.hpp"
+      ],
+      "make_group_by": [
+        "include/sqlgen/transpilation/group_by_t.hpp"
+      ],
+      "included_in_group_by": [
+        "include/sqlgen/transpilation/check_aggregations.hpp"
+      ],
+      "check_aggregations": [
+        "include/sqlgen/transpilation/check_aggregations.hpp"
+      ],
+      "make_order_by": [
+        "include/sqlgen/transpilation/order_by_t.hpp"
+      ],
+      "helper": [
+        "include/sqlgen/transpilation/table_tuple_t.hpp"
+      ],
+      "JoinWrapper": [
+        "include/sqlgen/transpilation/table_tuple_t.hpp"
+      ],
+      "TableTupleTypeHelper": [
+        "include/sqlgen/transpilation/table_tuple_t.hpp"
+      ],
+      "get_schema": [
+        "include/sqlgen/transpilation/get_schema.hpp"
+      ],
+      "is_equality_comparable": [
+        "include/sqlgen/transpilation/to_condition.hpp"
+      ],
+      "to_condition": [
+        "include/sqlgen/transpilation/to_condition.hpp"
+      ],
+      "ToJoin": [
+        "include/sqlgen/transpilation/to_joins.hpp"
+      ],
+      "to_join": [
+        "include/sqlgen/transpilation/to_joins.hpp"
+      ],
+      "to_joins": [
+        "include/sqlgen/transpilation/to_joins.hpp"
+      ],
+      "make_fields": [
+        "include/sqlgen/transpilation/make_fields.hpp"
+      ],
+      "to_group_by": [
+        "include/sqlgen/transpilation/to_group_by.hpp"
+      ],
+      "ToGroupBy": [
+        "include/sqlgen/transpilation/to_group_by.hpp"
+      ],
+      "to_limit": [
+        "include/sqlgen/transpilation/to_limit.hpp"
+      ],
+      "to_order_by": [
+        "include/sqlgen/transpilation/to_order_by.hpp"
+      ],
+      "ToOrderBy": [
+        "include/sqlgen/transpilation/to_order_by.hpp"
+      ],
+      "to_wrapper": [
+        "include/sqlgen/transpilation/to_order_by.hpp"
+      ],
+      "to_table_or_query": [
+        "include/sqlgen/transpilation/to_table_or_query.hpp"
+      ],
+      "to_select_from": [
+        "include/sqlgen/transpilation/to_select_from.hpp"
+      ],
+      "Where": [
+        "include/sqlgen/where.hpp"
+      ],
+      "where": [
+        "include/sqlgen/where.hpp"
+      ],
+      "operator|": [
+        "include/sqlgen/select_from.hpp",
+        "include/sqlgen/create_index.hpp",
+        "include/sqlgen/delete_from.hpp",
+        "include/sqlgen/read.hpp",
+        "include/sqlgen/update.hpp",
+        "include/sqlgen/as.hpp",
+        "include/sqlgen/cascade.hpp",
+        "include/sqlgen/if_exists.hpp",
+        "include/sqlgen/if_not_exists.hpp"
+      ],
+      "select_from_impl": [
+        "include/sqlgen/select_from.hpp"
+      ],
+      "select_from": [
+        "include/sqlgen/select_from.hpp"
+      ],
+      "get_table_or_view": [
+        "include/sqlgen/transpilation/get_table_or_view.hpp"
+      ],
+      "to_create_as": [
+        "include/sqlgen/transpilation/to_create_as.hpp"
+      ],
+      "create_as_impl": [
+        "include/sqlgen/create_as.hpp"
+      ],
+      "create_as": [
+        "include/sqlgen/create_as.hpp"
+      ],
+      "create_or_replace_view_as": [
+        "include/sqlgen/create_as.hpp"
+      ],
+      "to_vec": [
+        "include/sqlgen/transpilation/columns_t.hpp"
+      ],
+      "Columns": [
+        "include/sqlgen/transpilation/columns_t.hpp"
+      ],
+      "make_columns": [
+        "include/sqlgen/transpilation/columns_t.hpp",
+        "include/sqlgen/transpilation/make_columns.hpp"
+      ],
+      "to_create_index": [
+        "include/sqlgen/transpilation/to_create_index.hpp"
+      ],
+      "create_index_impl": [
+        "include/sqlgen/create_index.hpp"
+      ],
+      "create_index": [
+        "include/sqlgen/create_index.hpp"
+      ],
+      "create_unique_index": [
+        "include/sqlgen/create_index.hpp"
+      ],
+      "to_colname": [
+        "include/sqlgen/transpilation/make_columns.hpp"
+      ],
+      "to_column": [
+        "include/sqlgen/transpilation/make_columns.hpp"
+      ],
+      "to_create_table": [
+        "include/sqlgen/transpilation/to_create_table.hpp"
+      ],
+      "create_table": [
+        "include/sqlgen/create_table.hpp"
+      ],
+      "create_table_impl": [
+        "include/sqlgen/create_table.hpp"
+      ],
+      "to_delete_from": [
+        "include/sqlgen/transpilation/to_delete_from.hpp"
+      ],
+      "delete_from": [
+        "include/sqlgen/delete_from.hpp"
+      ],
+      "delete_from_impl": [
+        "include/sqlgen/delete_from.hpp"
+      ],
+      "to_drop": [
+        "include/sqlgen/transpilation/to_drop.hpp"
+      ],
+      "drop": [
+        "include/sqlgen/drop.hpp"
+      ],
+      "drop_impl": [
+        "include/sqlgen/drop.hpp"
+      ],
+      "is_unique_column_v": [
+        "include/sqlgen/internal/is_unique_column.hpp"
+      ],
+      "is_unique_column": [
+        "include/sqlgen/internal/is_unique_column.hpp"
+      ],
+      "is_constraint_v": [
+        "include/sqlgen/internal/is_constraint.hpp"
+      ],
+      "has_constraint_v": [
+        "include/sqlgen/internal/has_constraint.hpp"
+      ],
+      "to_insert_or_write": [
+        "include/sqlgen/transpilation/to_insert_or_write.hpp"
+      ],
+      "insert_impl": [
+        "include/sqlgen/insert.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "src/sqlgen/mysql/Connection.cpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "src/sqlgen/postgres/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp"
+      ],
+      "insert_or_replace": [
+        "include/sqlgen/insert.hpp"
+      ],
+      "read_to_select_from": [
+        "include/sqlgen/transpilation/read_to_select_from.hpp"
+      ],
+      "Read": [
+        "include/sqlgen/read.hpp"
+      ],
+      "read_impl": [
+        "include/sqlgen/read.hpp",
+        "include/sqlgen/mysql/Connection.hpp",
+        "src/sqlgen/mysql/Connection.cpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "src/sqlgen/postgres/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp"
+      ],
+      "to_set": [
+        "include/sqlgen/transpilation/to_sets.hpp"
+      ],
+      "to_sets": [
+        "include/sqlgen/transpilation/to_sets.hpp"
+      ],
+      "to_update": [
+        "include/sqlgen/transpilation/to_update.hpp"
+      ],
+      "update_impl": [
+        "include/sqlgen/update.hpp"
+      ],
+      "update": [
+        "include/sqlgen/update.hpp"
+      ],
+      "to_sql_impl": [
+        "include/sqlgen/mysql/to_sql.hpp",
+        "src/sqlgen/mysql/to_sql.cpp",
+        "include/sqlgen/postgres/to_sql.hpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "include/sqlgen/sqlite/to_sql.hpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "actual_insert": [
+        "include/sqlgen/mysql/Connection.hpp",
+        "src/sqlgen/mysql/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp"
+      ],
+      "make_conn": [
+        "include/sqlgen/mysql/Connection.hpp",
+        "src/sqlgen/mysql/Connection.cpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "src/sqlgen/postgres/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp"
+      ],
+      "prepare_statement": [
+        "include/sqlgen/mysql/Connection.hpp",
+        "src/sqlgen/mysql/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp"
+      ],
+      "write_impl": [
+        "include/sqlgen/mysql/Connection.hpp",
+        "src/sqlgen/mysql/Connection.cpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "src/sqlgen/postgres/Connection.cpp",
+        "include/sqlgen/sqlite/Connection.hpp",
+        "src/sqlgen/sqlite/Connection.cpp"
+      ],
+      "Connection": [
+        "include/sqlgen/mysql/Connection.hpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "include/sqlgen/sqlite/Connection.hpp"
+      ],
+      "~Connection": [
+        "include/sqlgen/mysql/Connection.hpp",
+        "include/sqlgen/postgres/Connection.hpp",
+        "include/sqlgen/sqlite/Connection.hpp"
+      ],
+      "~Iterator": [
+        "include/sqlgen/mysql/Iterator.hpp",
+        "src/sqlgen/mysql/Iterator.cpp",
+        "include/sqlgen/postgres/Iterator.hpp",
+        "src/sqlgen/postgres/Iterator.cpp",
+        "include/sqlgen/sqlite/Iterator.hpp",
+        "src/sqlgen/sqlite/Iterator.cpp"
+      ],
+      "make_error": [
+        "include/sqlgen/mysql/make_error.hpp"
+      ],
+      "aggregation_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "cast_type_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp"
+      ],
+      "column_or_value_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "condition_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "condition_to_sql_impl": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "column_to_sql_definition": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "create_index_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "create_table_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "create_as_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "date_plus_duration_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp"
+      ],
+      "delete_from_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "drop_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "escape_single_quote": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "field_to_str": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "foreign_keys_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp"
+      ],
+      "get_foreign_keys": [
+        "src/sqlgen/mysql/to_sql.cpp"
+      ],
+      "get_primary_keys": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp"
+      ],
+      "insert_or_write_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "join_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "operation_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "properties_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "select_from_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "table_or_query_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "type_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "update_to_sql": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "get_name": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "wrap_in_quotes": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp",
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "wrap_in_single_quotes": [
+        "src/sqlgen/mysql/to_sql.cpp",
+        "src/sqlgen/postgres/to_sql.cpp"
+      ],
+      "to_buffer": [
+        "include/sqlgen/postgres/Connection.hpp",
+        "src/sqlgen/postgres/Connection.cpp"
+      ],
+      "make_cursor_name": [
+        "include/sqlgen/postgres/Iterator.hpp"
+      ],
+      "shutdown": [
+        "include/sqlgen/postgres/Iterator.hpp",
+        "src/sqlgen/postgres/Iterator.cpp"
+      ],
+      "get_enum_types": [
+        "src/sqlgen/postgres/to_sql.cpp"
+      ],
+      "insert_to_sql": [
+        "src/sqlgen/postgres/to_sql.cpp"
+      ],
+      "write_to_sql": [
+        "src/sqlgen/postgres/to_sql.cpp"
+      ],
+      "get_enum_mapping": [
+        "src/sqlgen/postgres/to_sql.cpp"
+      ],
+      "step": [
+        "include/sqlgen/sqlite/Iterator.hpp"
+      ],
+      "pad_with_zeros": [
+        "src/sqlgen/sqlite/to_sql.cpp"
+      ],
+      "operator\"\"_c": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t1": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t2": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t3": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t4": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t5": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t6": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t7": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t8": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t9": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t10": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t11": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t12": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t13": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t14": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t15": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t16": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t17": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t18": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t19": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t20": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t21": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t22": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t23": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t24": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t25": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t26": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t27": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t28": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t29": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t30": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t31": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t32": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t33": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t34": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t35": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t36": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t37": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t38": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t39": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t40": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t41": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t42": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t43": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t44": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t45": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t46": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t47": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t48": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t49": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t50": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t51": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t52": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t53": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t54": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t55": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t56": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t57": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t58": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t59": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t60": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t61": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t62": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t63": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t64": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t65": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t66": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t67": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t68": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t69": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t70": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t71": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t72": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t73": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t74": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t75": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t76": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t77": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t78": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t79": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t80": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t81": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t82": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t83": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t84": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t85": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t86": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t87": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t88": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t89": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t90": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t91": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t92": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t93": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t94": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t95": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t96": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t97": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t98": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "operator\"\"_t99": [
+        "include/sqlgen/literals.hpp"
+      ],
+      "Session<Connection>": [
+        "include/sqlgen/Session.hpp"
+      ],
+      "~Session<Connection>": [
+        "include/sqlgen/Session.hpp"
+      ],
+      "Session": [
+        "include/sqlgen/Session.hpp"
+      ],
+      "ConnectionPool<Connection>": [
+        "include/sqlgen/ConnectionPool.hpp"
+      ],
+      "acquire": [
+        "include/sqlgen/ConnectionPool.hpp"
+      ],
+      "available": [
+        "include/sqlgen/ConnectionPool.hpp"
+      ],
+      "~ConnectionPool<Connection>": [
+        "include/sqlgen/ConnectionPool.hpp"
+      ],
+      "ConnectionPool": [
+        "include/sqlgen/ConnectionPool.hpp"
+      ],
+      "ConnectionPoolConfig": [
+        "include/sqlgen/ConnectionPool.hpp"
+      ],
+      "make_connection_pool": [
+        "include/sqlgen/ConnectionPool.hpp"
+      ],
+      "session": [
+        "include/sqlgen/ConnectionPool.hpp"
+      ],
+      "avg": [
+        "include/sqlgen/aggregations.hpp"
+      ],
+      "count": [
+        "include/sqlgen/aggregations.hpp"
+      ],
+      "count_distinct": [
+        "include/sqlgen/aggregations.hpp"
+      ],
+      "max": [
+        "include/sqlgen/aggregations.hpp"
+      ],
+      "min": [
+        "include/sqlgen/aggregations.hpp"
+      ],
+      "sum": [
+        "include/sqlgen/aggregations.hpp"
+      ],
+      "BeginTransaction": [
+        "include/sqlgen/begin_transaction.hpp"
+      ],
+      "begin_transaction_impl": [
+        "include/sqlgen/begin_transaction.hpp"
+      ],
+      "cascade": [
+        "include/sqlgen/cascade.hpp"
+      ],
+      "Cascade": [
+        "include/sqlgen/cascade.hpp"
+      ],
+      "Commit": [
+        "include/sqlgen/commit.hpp"
+      ],
+      "commit_impl": [
+        "include/sqlgen/commit.hpp"
+      ],
+      "Exec": [
+        "include/sqlgen/exec.hpp"
+      ],
+      "if_exists": [
+        "include/sqlgen/if_exists.hpp"
+      ],
+      "IfExists": [
+        "include/sqlgen/if_exists.hpp"
+      ],
+      "if_not_exists": [
+        "include/sqlgen/if_not_exists.hpp"
+      ],
+      "IfNotExists": [
+        "include/sqlgen/if_not_exists.hpp"
+      ],
+      "full_join": [
+        "include/sqlgen/joins.hpp"
+      ],
+      "inner_join": [
+        "include/sqlgen/joins.hpp"
+      ],
+      "left_join": [
+        "include/sqlgen/joins.hpp"
+      ],
+      "right_join": [
+        "include/sqlgen/joins.hpp"
+      ],
+      "abs": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "cast": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "ceil": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "coalesce": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "concat": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "cos": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "day": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "days_between": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "exp": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "floor": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "hour": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "length": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "ln": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "log2": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "lower": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "minute": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "month": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "replace": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "round": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "second": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "sin": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "sqrt": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "tan": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "unixepoch": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "upper": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "weekday": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "year": [
+        "include/sqlgen/operations.hpp"
+      ],
+      "Rollback": [
+        "include/sqlgen/rollback.hpp"
+      ],
+      "rollback_impl": [
+        "include/sqlgen/rollback.hpp"
+      ],
+      "connect": [
+        "include/sqlgen/mysql/connect.hpp",
+        "include/sqlgen/postgres/connect.hpp",
+        "include/sqlgen/sqlite/connect.hpp"
+      ]
+    }
+  }

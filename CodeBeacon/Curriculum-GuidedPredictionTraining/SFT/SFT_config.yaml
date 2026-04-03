@@ -1,0 +1,43 @@
+### model
+model_name_or_path: Qwen3-4B
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
+
+### dataset
+dataset: $TRAIN_DATA_PATH
+template: $llamafactory_template
+cutoff_len: 32768
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+# neat_packing: true
+
+### output
+output_dir: $CKPT_PATH
+logging_steps: 1
+save_steps: 200
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: tensorboard
+logging_dir: $TF_EVENTS_PATH
+save_total_limit: 10
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 1
+learning_rate: 5.0e-5
+max_steps: 229
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+enable_liger_kernel: true
+use_unsloth_gc: true
+flash_attn: fa2

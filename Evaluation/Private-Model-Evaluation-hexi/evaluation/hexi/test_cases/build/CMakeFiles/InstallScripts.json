@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/data/workspace/Private-Model-Evaluation-hexi/evaluation/Hexi/test_cases/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

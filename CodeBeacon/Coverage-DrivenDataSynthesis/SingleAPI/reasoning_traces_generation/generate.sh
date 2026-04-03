@@ -1,0 +1,7 @@
+
+python3 generate_application_answering_data_reasoning_content.py deepseek-v3.2 '/data/mm64/gshengou/QQMail/AgenticSearch/functional_description_total_0_1_similarity_top10_semantic_only_current_project.json' 20
+
+python3 generate_application_answering_data_reasoning_content.py deepseek-v3.2 '/data/mm64/gshengou/QQMail/AgenticSearch/functional_description_total_1_2_similarity_top10_semantic_only_current_project.json' 20
+
+python3 generate_application_answering_data_reasoning_content.py deepseek-v3.2 '/data/mm64/gshengou/QQMail/AgenticSearch/functional_description_total_2_3_similarity_top10_semantic_only_current_project.json' 20
+

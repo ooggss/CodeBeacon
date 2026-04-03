@@ -1,0 +1,1 @@
+python3 refinement.py --eval-enrich entity_name_to_file_path.json file_path_to_keyword.json   $PREDICTION_RESULT_PATH

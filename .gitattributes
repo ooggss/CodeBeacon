@@ -1,0 +1,5 @@
+CodeBeacon/Coverage-DrivenDataSynthesis/SingleAPI/reasoning_traces_generation/functional_description_total_*_similarity_*.json filter=lfs diff=lfs merge=lfs -text
+CodeBeacon/Coverage-DrivenDataSynthesis/SynthesisMultiAPICombination/reasoning_traces_generation/extracted_functionality_descriptions_*_total.json filter=lfs diff=lfs merge=lfs -text
+Results/RQ1/Zero-HintTaskFormat/CodeBeacon/sqlgen/gpt-5.1.json filter=lfs diff=lfs merge=lfs -text
+*.gch filter=lfs diff=lfs merge=lfs -text
+core.* filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,8 @@
+
+python3 generate_multi_api_reasoning_content.py deepseek-v3.2 extracted_functionality_descriptions_sqlgen_total.json sqlgen -n 64
+
+python3 generate_multi_api_reasoning_content.py deepseek-v3.2 extracted_functionality_descriptions_hexi_total.json hexi -n 64
+
+python3 generate_multi_api_reasoning_content.py deepseek-v3.2 extracted_functionality_descriptions_leann_total.json leann -n 64
+
+python3 generate_multi_api_reasoning_content.py deepseek-v3.2 extracted_functionality_descriptions_reaction_total.json reaction -n 64

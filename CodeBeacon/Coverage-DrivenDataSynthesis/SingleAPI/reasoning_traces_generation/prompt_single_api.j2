@@ -1,0 +1,38 @@
+<message role="system"></message><message role="user">
+# Description
+Return the target code entity's name, and location from the third-party library that are corresponding to the following functional description.
+
+# Functional Description
+{{ functional_description }}
+
+# Output Format
+[
+    {
+        "name": "[name of the code entity]",
+        "location": "[location of the code entity]"
+    }
+]
+
+Below are some code entities such as functions, classes, structs, and global variables, along with the information on their source code, names, and locations as well as their dependencies just for understanding the entity. ** Do not return the dependencies of the code entity **:
+
+{% for project_name, project_data in projects.items() %}
+{% for item in project_data['items'] %}
+- name: {{ item.name }}
+- source code: 
+```
+{{ item.target_entity_code }}
+```
+- location: {{ item.target_answer }}
+- dependencies: 
+{% for dependency in item.target_entity_dependency %}
+  - name: {{ dependency.dependency_name }}
+    source code: 
+    ```
+      {{ dependency.dependency_code | indent(6) }}
+    ```
+{% endfor %}
+
+
+{% endfor %}
+{% endfor %}
+</message>

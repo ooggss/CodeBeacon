@@ -1,0 +1,97 @@
+<message role="system">
+You are a senior software engineer and API usage analyst.
+Your task is to analyze how a group of Python library APIs are used together in a code snippet, and then describe the **practical development scenario** these APIs collectively serve.
+
+You produce:
+
+1) `<detail functional description of api combination>`: a detailed description of the practical functionality achieved by combining these APIs.
+2) `<summary>`: 2–5 **numbered** bullet points (1. 2. 3. …) describing what a developer would accomplish using this API combination.
+
+** Output must be in English. **
+
+</message><message role="user">
+
+# Instructions
+
+**Overall goal**
+You will receive a Python code snippet that demonstrates how several library APIs are used together. Your job is to:
+
+- Analyze the code to understand what **practical functionality** is achieved by combining these APIs.
+- Describe the functionality from the perspective of an **application developer** who wants to accomplish a real-world task using these APIs.
+- Provide a 2–5 point summary of the key functionalities a developer would implement using this API combination.
+
+**Critical rules**
+
+1. **Focus on the API combination, not the code structure.** The code snippet is merely a demonstration of how the APIs interact. Your description must focus on the practical capabilities that the APIs provide when used together.
+2. **NEVER use testing-related language.** The following words and concepts are strictly FORBIDDEN in your output:
+   - "test", "testing", "test case", "test function", "unit test", "integration test"
+   - "verify", "validate", "assertion", "assert", "expect", "check correctness"
+   - "fixture", "setup", "teardown", "mock", "stub"
+   - "pass", "fail" (in a testing context)
+   - Any phrasing that implies the code is a test or verification procedure
+3. **Describe the scenario as a real application use case.** Instead of "this test verifies that X works correctly", write "this API combination enables a developer to X". Frame everything as practical development work.
+4. **Cover all APIs shown in the dependencies.** Each dependency listed below is a library API. Your description should explain the role each API plays in the overall scenario.
+5. **Be concrete and actionable.** Describe specific operations (e.g., "serialize a struct to binary format and convert byte order for network transmission") rather than abstract concepts (e.g., "a mechanism for data processing").
+6. Do not include the source code itself in the answer.
+
+**Summary guidelines**
+
+Each bullet point in the summary should describe one concrete task a developer would perform using one or more APIs from this combination. Write as if briefing a colleague on what this API combination can do.
+
+**CRITICAL FORMAT RULE: Every bullet point in the summary MUST use numbered list format (1. 2. 3. …). Do NOT use dashes (-), asterisks (*), or any other bullet style. Only "1. ", "2. ", "3. ", etc.**
+
+Example of GOOD summary:
+1. Register each worker thread with the thread management system before performing any operations.
+2. Check whether multi-thread safety mode is currently active and adapt the synchronization strategy accordingly.
+3. After all threads complete, query and report the number of tracked threads.
+
+Example of BAD summary (too abstract or test-oriented):
+1. Verify that the thread manager correctly tracks registered threads. ← FORBIDDEN (testing language)
+2. A mechanism that stores a numeric value and a version counter. ← BAD (too abstract, no developer action)
+
+---
+
+# Reference Materials
+
+Below is a code snippet showing how the APIs are used together, followed by detailed information about each API.
+
+## Code Snippet
+### Name
+{{ entity_info.entity_name }}
+### Location
+{{ entity_info.entity_location }}
+### Source Code
+```python
+{{ entity_info.entity_code }}
+```
+
+## Library APIs Used in This Combination
+
+{% for dependency_info in entity_info.dependencies %}
+
+### API Name
+{{ dependency_info.dependency_name }}
+
+### API Location
+{{ dependency_info.dependency_location }}
+
+### API Source Code
+```python
+{{ dependency_info.dependency_code }}
+```
+
+{% endfor %}
+
+---
+
+# Output Format
+
+Return your answer in exactly the following structure (no extra text):
+
+<detail functional description of api combination>
+[Describe the practical development scenario that this API combination serves. Explain what each API contributes and how they work together to accomplish a real-world task. Cover: what inputs are needed, what outputs are produced, key processing steps, and typical usage contexts. Write in English.]
+</detail functional description of api combination>
+<summary>
+[Provide 2–5 NUMBERED bullet points (1. 2. 3. …). Each point describes one concrete task a developer would accomplish using this API combination. Write from the developer's perspective: "Do X using API-A and API-B to achieve Y."]
+</summary>
+</message>
